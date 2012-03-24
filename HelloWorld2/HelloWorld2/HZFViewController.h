@@ -10,4 +10,10 @@
 
 @interface HZFViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UIButton *boton1;
+@property (strong, nonatomic) IBOutlet UIButton *boton2;
+
+- (IBAction)cambiarTexto:(id)sender;
+
 @end
