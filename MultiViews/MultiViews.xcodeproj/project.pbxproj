@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74C67C97151F3D5100EE7A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67C96151F3D5100EE7A9F /* UIKit.framework */; };
+		74C67C99151F3D5100EE7A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67C98151F3D5100EE7A9F /* Foundation.framework */; };
+		74C67C9B151F3D5100EE7A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67C9A151F3D5100EE7A9F /* CoreGraphics.framework */; };
+		74C67CA1151F3D5100EE7A9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C67C9F151F3D5100EE7A9F /* InfoPlist.strings */; };
+		74C67CA3151F3D5100EE7A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CA2151F3D5100EE7A9F /* main.m */; };
+		74C67CA7151F3D5100EE7A9F /* HZFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CA6151F3D5100EE7A9F /* HZFAppDelegate.m */; };
+		74C67CB3151F44A700EE7A9F /* HZFBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CB1151F44A700EE7A9F /* HZFBlueViewController.m */; };
+		74C67CB4151F44A700EE7A9F /* HZFBlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CB2151F44A700EE7A9F /* HZFBlueViewController.xib */; };
+		74C67CB8151F44BB00EE7A9F /* HZFYellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CB6151F44BB00EE7A9F /* HZFYellowViewController.m */; };
+		74C67CB9151F44BB00EE7A9F /* HZFYellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CB7151F44BB00EE7A9F /* HZFYellowViewController.xib */; };
+		74C67CC1151F477A00EE7A9F /* HZFSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */; };
+		74C67CC2151F477A00EE7A9F /* HZFSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74C67C92151F3D5100EE7A9F /* MultiViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C67C96151F3D5100EE7A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74C67C98151F3D5100EE7A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74C67C9A151F3D5100EE7A9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74C67C9E151F3D5100EE7A9F /* MultiViews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiViews-Info.plist"; sourceTree = "<group>"; };
+		74C67CA0151F3D5100EE7A9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74C67CA2151F3D5100EE7A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74C67CA4151F3D5100EE7A9F /* MultiViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiViews-Prefix.pch"; sourceTree = "<group>"; };
+		74C67CA5151F3D5100EE7A9F /* HZFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZFAppDelegate.h; sourceTree = "<group>"; };
+		74C67CA6151F3D5100EE7A9F /* HZFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZFAppDelegate.m; sourceTree = "<group>"; };
+		74C67CB0151F44A700EE7A9F /* HZFBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFBlueViewController.h; sourceTree = "<group>"; };
+		74C67CB1151F44A700EE7A9F /* HZFBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFBlueViewController.m; sourceTree = "<group>"; };
+		74C67CB2151F44A700EE7A9F /* HZFBlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFBlueViewController.xib; sourceTree = "<group>"; };
+		74C67CB5151F44BB00EE7A9F /* HZFYellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = HZFYellowViewController.h; sourceTree = "<group>"; };
+		74C67CB6151F44BB00EE7A9F /* HZFYellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFYellowViewController.m; sourceTree = "<group>"; };
+		74C67CB7151F44BB00EE7A9F /* HZFYellowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFYellowViewController.xib; sourceTree = "<group>"; };
+		74C67CBE151F477900EE7A9F /* HZFSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFSwitchViewController.h; sourceTree = "<group>"; };
+		74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFSwitchViewController.m; sourceTree = "<group>"; };
+		74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFSwitchViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74C67C8F151F3D5100EE7A9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C67C97151F3D5100EE7A9F /* UIKit.framework in Frameworks */,
+				74C67C99151F3D5100EE7A9F /* Foundation.framework in Frameworks */,
+				74C67C9B151F3D5100EE7A9F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74C67C87151F3D5100EE7A9F = {
+			isa = PBXGroup;
+			children = (
+				74C67C9C151F3D5100EE7A9F /* MultiViews */,
+				74C67C95151F3D5100EE7A9F /* Frameworks */,
+				74C67C93151F3D5100EE7A9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74C67C93151F3D5100EE7A9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74C67C92151F3D5100EE7A9F /* MultiViews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74C67C95151F3D5100EE7A9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74C67C96151F3D5100EE7A9F /* UIKit.framework */,
+				74C67C98151F3D5100EE7A9F /* Foundation.framework */,
+				74C67C9A151F3D5100EE7A9F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74C67C9C151F3D5100EE7A9F /* MultiViews */ = {
+			isa = PBXGroup;
+			children = (
+				74C67CA5151F3D5100EE7A9F /* HZFAppDelegate.h */,
+				74C67CA6151F3D5100EE7A9F /* HZFAppDelegate.m */,
+				74C67C9D151F3D5100EE7A9F /* Supporting Files */,
+				74C67CB0151F44A700EE7A9F /* HZFBlueViewController.h */,
+				74C67CB1151F44A700EE7A9F /* HZFBlueViewController.m */,
+				74C67CB2151F44A700EE7A9F /* HZFBlueViewController.xib */,
+				74C67CB5151F44BB00EE7A9F /* HZFYellowViewController.h */,
+				74C67CB6151F44BB00EE7A9F /* HZFYellowViewController.m */,
+				74C67CB7151F44BB00EE7A9F /* HZFYellowViewController.xib */,
+				74C67CBE151F477900EE7A9F /* HZFSwitchViewController.h */,
+				74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */,
+				74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */,
+			);
+			path = MultiViews;
+			sourceTree = "<group>";
+		};
+		74C67C9D151F3D5100EE7A9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C67C9E151F3D5100EE7A9F /* MultiViews-Info.plist */,
+				74C67C9F151F3D5100EE7A9F /* InfoPlist.strings */,
+				74C67CA2151F3D5100EE7A9F /* main.m */,
+				74C67CA4151F3D5100EE7A9F /* MultiViews-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74C67C91151F3D5100EE7A9F /* MultiViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C67CAA151F3D5100EE7A9F /* Build configuration list for PBXNativeTarget "MultiViews" */;
+			buildPhases = (
+				74C67C8E151F3D5100EE7A9F /* Sources */,
+				74C67C8F151F3D5100EE7A9F /* Frameworks */,
+				74C67C90151F3D5100EE7A9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiViews;
+			productName = MultiViews;
+			productReference = 74C67C92151F3D5100EE7A9F /* MultiViews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74C67C89151F3D5100EE7A9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HZF;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 74C67C8C151F3D5100EE7A9F /* Build configuration list for PBXProject "MultiViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74C67C87151F3D5100EE7A9F;
+			productRefGroup = 74C67C93151F3D5100EE7A9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74C67C91151F3D5100EE7A9F /* MultiViews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74C67C90151F3D5100EE7A9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C67CA1151F3D5100EE7A9F /* InfoPlist.strings in Resources */,
+				74C67CB4151F44A700EE7A9F /* HZFBlueViewController.xib in Resources */,
+				74C67CB9151F44BB00EE7A9F /* HZFYellowViewController.xib in Resources */,
+				74C67CC2151F477A00EE7A9F /* HZFSwitchViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74C67C8E151F3D5100EE7A9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C67CA3151F3D5100EE7A9F /* main.m in Sources */,
+				74C67CA7151F3D5100EE7A9F /* HZFAppDelegate.m in Sources */,
+				74C67CB3151F44A700EE7A9F /* HZFBlueViewController.m in Sources */,
+				74C67CB8151F44BB00EE7A9F /* HZFYellowViewController.m in Sources */,
+				74C67CC1151F477A00EE7A9F /* HZFSwitchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74C67C9F151F3D5100EE7A9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C67CA0151F3D5100EE7A9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74C67CA8151F3D5100EE7A9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		74C67CA9151F3D5100EE7A9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74C67CAB151F3D5100EE7A9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiViews/MultiViews-Prefix.pch";
+				INFOPLIST_FILE = "MultiViews/MultiViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74C67CAC151F3D5100EE7A9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiViews/MultiViews-Prefix.pch";
+				INFOPLIST_FILE = "MultiViews/MultiViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74C67C8C151F3D5100EE7A9F /* Build configuration list for PBXProject "MultiViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C67CA8151F3D5100EE7A9F /* Debug */,
+				74C67CA9151F3D5100EE7A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C67CAA151F3D5100EE7A9F /* Build configuration list for PBXNativeTarget "MultiViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C67CAB151F3D5100EE7A9F /* Debug */,
+				74C67CAC151F3D5100EE7A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74C67C89151F3D5100EE7A9F /* Project object */;
+}
