@@ -1,5 +1,5 @@
 //
-//  HZFBlueViewController.h
+//  HZFRedViewController.h
 //  MultiViews
 //
 //  Created by Axel Hernández Ferrera on 25/03/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZFBlueViewController : UIViewController
-
-- (IBAction)changeColor:(id)sender;
+@interface HZFRedViewController : UIViewController
 
 @end

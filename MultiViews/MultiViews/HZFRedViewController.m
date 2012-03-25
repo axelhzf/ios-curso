@@ -1,18 +1,18 @@
 //
-//  HZFBlueViewController.m
+//  HZFRedViewController.m
 //  MultiViews
 //
 //  Created by Axel Hernández Ferrera on 25/03/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "HZFBlueViewController.h"
+#import "HZFRedViewController.h"
 
-@interface HZFBlueViewController ()
+@interface HZFRedViewController ()
 
 @end
 
-@implementation HZFBlueViewController
+@implementation HZFRedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,16 +39,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (IBAction)changeColor:(id)sender {
-    [UIView beginAnimations:@"View Flip" context:nil];
-    [UIView setAnimationDuration:1.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    self.view.backgroundColor = [UIColor colorWithRed:120/255. green:224/255. blue:1 alpha:1];
-    
-    [UIView commitAnimations];
 }
 
 @end

@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "HZFBlueViewController.h"
 #import "HZFYellowViewController.h"
+#import "HZFRedViewController.h"
 
 @interface HZFSwitchViewController : UIViewController
 
 @property (strong, nonatomic) HZFBlueViewController *blueViewController;
 @property (strong, nonatomic) HZFYellowViewController *yellowViewController;
+@property (strong, nonatomic) HZFRedViewController *redViewController;
 
 - (IBAction)switchViews:(id)sender;
 

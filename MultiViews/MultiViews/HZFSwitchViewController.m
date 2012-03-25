@@ -14,7 +14,7 @@
 
 @implementation HZFSwitchViewController
 
-@synthesize blueViewController, yellowViewController;
+@synthesize blueViewController, yellowViewController, redViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +32,7 @@
     [super viewDidUnload];
     self.blueViewController = nil;
     self.yellowViewController = nil;
+    self.redViewController = nil;
 }
 
 -(void)insertarVistaAzul {
@@ -52,6 +53,13 @@
     [self.view insertSubview:self.yellowViewController.view atIndex:0];
 }
 
+- (void)insertarVistaRoja {
+    if (self.redViewController == nil){
+        self.redViewController = [[HZFRedViewController alloc] initWithNibName:@"HZFRedViewController" bundle:nil];
+    }
+    [self.view insertSubview:self.redViewController.view atIndex:0];
+}
+
 - (IBAction)switchViews:(id)sender {     
     [UIView beginAnimations:@"View Flip" context:nil];
     [UIView setAnimationDuration:1.25];
@@ -63,12 +71,18 @@
         
         [blueViewController.view removeFromSuperview];
         [self insertarVistaAmarilla];
-    }else{
-        [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromLeft
+    }else if([self isViewVisible:self.yellowViewController.view]){
+        [UIView setAnimationTransition: UIViewAnimationTransitionCurlDown
                                forView:self.view cache:YES];
         
         [yellowViewController.view removeFromSuperview];
-        [self insertarVistaAzul];
+        [self insertarVistaRoja];
+    }else {
+        [UIView setAnimationTransition: UIViewAnimationTransitionCurlUp
+                               forView:self.view cache:YES];
+        
+        [redViewController.view removeFromSuperview];
+        [self insertarVistaAzul];        
     }
 
     [UIView commitAnimations];

@@ -19,6 +19,8 @@
 		74C67CB9151F44BB00EE7A9F /* HZFYellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CB7151F44BB00EE7A9F /* HZFYellowViewController.xib */; };
 		74C67CC1151F477A00EE7A9F /* HZFSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */; };
 		74C67CC2151F477A00EE7A9F /* HZFSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */; };
+		74C67CCC151F5D5C00EE7A9F /* HZFRedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C67CCA151F5D5C00EE7A9F /* HZFRedViewController.m */; };
+		74C67CCD151F5D5C00EE7A9F /* HZFRedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C67CCB151F5D5C00EE7A9F /* HZFRedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +37,15 @@
 		74C67CB0151F44A700EE7A9F /* HZFBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFBlueViewController.h; sourceTree = "<group>"; };
 		74C67CB1151F44A700EE7A9F /* HZFBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFBlueViewController.m; sourceTree = "<group>"; };
 		74C67CB2151F44A700EE7A9F /* HZFBlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFBlueViewController.xib; sourceTree = "<group>"; };
-		74C67CB5151F44BB00EE7A9F /* HZFYellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = HZFYellowViewController.h; sourceTree = "<group>"; };
+		74C67CB5151F44BB00EE7A9F /* HZFYellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFYellowViewController.h; sourceTree = "<group>"; };
 		74C67CB6151F44BB00EE7A9F /* HZFYellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFYellowViewController.m; sourceTree = "<group>"; };
 		74C67CB7151F44BB00EE7A9F /* HZFYellowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFYellowViewController.xib; sourceTree = "<group>"; };
 		74C67CBE151F477900EE7A9F /* HZFSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFSwitchViewController.h; sourceTree = "<group>"; };
 		74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFSwitchViewController.m; sourceTree = "<group>"; };
 		74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFSwitchViewController.xib; sourceTree = "<group>"; };
+		74C67CC9151F5D5C00EE7A9F /* HZFRedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFRedViewController.h; sourceTree = "<group>"; };
+		74C67CCA151F5D5C00EE7A9F /* HZFRedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFRedViewController.m; sourceTree = "<group>"; };
+		74C67CCB151F5D5C00EE7A9F /* HZFRedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZFRedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,9 @@
 				74C67CBE151F477900EE7A9F /* HZFSwitchViewController.h */,
 				74C67CBF151F477900EE7A9F /* HZFSwitchViewController.m */,
 				74C67CC0151F477900EE7A9F /* HZFSwitchViewController.xib */,
+				74C67CC9151F5D5C00EE7A9F /* HZFRedViewController.h */,
+				74C67CCA151F5D5C00EE7A9F /* HZFRedViewController.m */,
+				74C67CCB151F5D5C00EE7A9F /* HZFRedViewController.xib */,
 			);
 			path = MultiViews;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 				74C67CB4151F44A700EE7A9F /* HZFBlueViewController.xib in Resources */,
 				74C67CB9151F44BB00EE7A9F /* HZFYellowViewController.xib in Resources */,
 				74C67CC2151F477A00EE7A9F /* HZFSwitchViewController.xib in Resources */,
+				74C67CCD151F5D5C00EE7A9F /* HZFRedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +193,7 @@
 				74C67CB3151F44A700EE7A9F /* HZFBlueViewController.m in Sources */,
 				74C67CB8151F44BB00EE7A9F /* HZFYellowViewController.m in Sources */,
 				74C67CC1151F477A00EE7A9F /* HZFSwitchViewController.m in Sources */,
+				74C67CCC151F5D5C00EE7A9F /* HZFRedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
