@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		74772ED3151F94DE0094CBE4 /* HZFCheckinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */; };
 		74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */; };
+		74A7F47D152B63D600B4E56F /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F47C152B63D600B4E56F /* apple.png */; };
 		74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDD151F7A3200EE7A9F /* UIKit.framework */; };
 		74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDF151F7A3200EE7A9F /* Foundation.framework */; };
 		74C67CE2151F7A3200EE7A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CE1151F7A3200EE7A9F /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 		74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HZFCheckinsViewController.h; path = ../HZFCheckinsViewController.h; sourceTree = "<group>"; };
 		74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HZFCheckinsViewController.m; path = ../HZFCheckinsViewController.m; sourceTree = "<group>"; };
 		74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HZFCheckinsViewController.xib; path = ../HZFCheckinsViewController.xib; sourceTree = "<group>"; };
+		74A7F47C152B63D600B4E56F /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 		74C67CD9151F7A3200EE7A9F /* twosquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twosquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C67CDD151F7A3200EE7A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C67CDF151F7A3200EE7A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,7 @@
 		74C67CE4151F7A3200EE7A9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				74A7F47C152B63D600B4E56F /* apple.png */,
 				74C67CE5151F7A3200EE7A9F /* twosquare-Info.plist */,
 				74C67CE6151F7A3200EE7A9F /* InfoPlist.strings */,
 				74C67CE9151F7A3200EE7A9F /* main.m */,
@@ -161,6 +164,7 @@
 			files = (
 				74C67CE8151F7A3200EE7A9F /* InfoPlist.strings in Resources */,
 				74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */,
+				74A7F47D152B63D600B4E56F /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

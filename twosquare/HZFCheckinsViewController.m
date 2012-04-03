@@ -61,12 +61,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    HZFCheckin *checkin = [checkins.data objectAtIndex: indexPath.row];    
+    NSUInteger row = indexPath.row;
+    HZFCheckin *checkin = [checkins.data objectAtIndex: row];    
     cell.textLabel.text = checkin.nombre;
-    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Checking from %@", checkin.usuario];
+    cell.imageView.image = [UIImage imageNamed:@"apple.png"];
+
     return cell;
 }
 
@@ -110,6 +113,13 @@
 */
 
 #pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithRed:243/255. green:246/255. blue:250/255. alpha:1];
+        cell.backgroundColor = altCellColor;
+    }
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

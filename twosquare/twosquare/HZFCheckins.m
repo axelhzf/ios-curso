@@ -37,11 +37,21 @@
     checkin2.categoria = @"Tienda";
     checkin2.calificacion = 7;
     checkin2.usuario = @"axelhzf";
-    checkin2.fechaCreacion = [NSDate date];
-        
+    checkin2.fechaCreacion = [NSDate date];  
     [checkins.data addObject:checkin2];
     
-    NSLog(@"fakes %d", [checkins.data count]);
+
+    HZFCheckin *checkin3 = [[HZFCheckin alloc] init];
+    checkin3.nombre = @"Place3";
+    checkin3.categoria = @"Bar";
+    checkin3.calificacion = 7;
+    checkin3.usuario = @"axelhzf";
+    checkin3.fechaCreacion = [NSDate date];  
+    [checkins.data addObject:checkin3];
+    
+    [checkins.data addObjectsFromArray:checkins.data];
+    [checkins.data addObjectsFromArray:checkins.data];
+    [checkins.data addObjectsFromArray:checkins.data];
     
     return checkins;
 }
