@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		74772ED3151F94DE0094CBE4 /* HZFCheckinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */; };
 		74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */; };
-		74A7F47D152B63D600B4E56F /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F47C152B63D600B4E56F /* apple.png */; };
+		74A7F484152B711300B4E56F /* twoSquare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F483152B711300B4E56F /* twoSquare.storyboard */; };
+		74A7F48C152E5C0A00B4E56F /* HZFCheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */; };
+		74A7F490152E643600B4E56F /* restaurante.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F48D152E643600B4E56F /* restaurante.png */; };
+		74A7F491152E643600B4E56F /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F48E152E643600B4E56F /* bar.png */; };
+		74A7F492152E643600B4E56F /* tienda.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F48F152E643600B4E56F /* tienda.png */; };
 		74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDD151F7A3200EE7A9F /* UIKit.framework */; };
 		74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDF151F7A3200EE7A9F /* Foundation.framework */; };
 		74C67CE2151F7A3200EE7A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CE1151F7A3200EE7A9F /* CoreGraphics.framework */; };
@@ -24,7 +28,12 @@
 		74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HZFCheckinsViewController.h; path = ../HZFCheckinsViewController.h; sourceTree = "<group>"; };
 		74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HZFCheckinsViewController.m; path = ../HZFCheckinsViewController.m; sourceTree = "<group>"; };
 		74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HZFCheckinsViewController.xib; path = ../HZFCheckinsViewController.xib; sourceTree = "<group>"; };
-		74A7F47C152B63D600B4E56F /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		74A7F483152B711300B4E56F /* twoSquare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = twoSquare.storyboard; sourceTree = "<group>"; };
+		74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFCheckinTableViewCell.h; sourceTree = "<group>"; };
+		74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFCheckinTableViewCell.m; sourceTree = "<group>"; };
+		74A7F48D152E643600B4E56F /* restaurante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurante.png; sourceTree = "<group>"; };
+		74A7F48E152E643600B4E56F /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		74A7F48F152E643600B4E56F /* tienda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tienda.png; sourceTree = "<group>"; };
 		74C67CD9151F7A3200EE7A9F /* twosquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twosquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C67CDD151F7A3200EE7A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C67CDF151F7A3200EE7A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74A7F493152E643A00B4E56F /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				74A7F48D152E643600B4E56F /* restaurante.png */,
+				74A7F48E152E643600B4E56F /* bar.png */,
+				74A7F48F152E643600B4E56F /* tienda.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		74C67CCE151F7A3200EE7A9F = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +113,10 @@
 				74C67CF8151F836500EE7A9F /* HZFCheckins.m */,
 				74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */,
 				74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */,
+				74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */,
+				74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */,
 				74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */,
+				74A7F483152B711300B4E56F /* twoSquare.storyboard */,
 			);
 			path = twosquare;
 			sourceTree = "<group>";
@@ -102,7 +124,7 @@
 		74C67CE4151F7A3200EE7A9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74A7F47C152B63D600B4E56F /* apple.png */,
+				74A7F493152E643A00B4E56F /* icons */,
 				74C67CE5151F7A3200EE7A9F /* twosquare-Info.plist */,
 				74C67CE6151F7A3200EE7A9F /* InfoPlist.strings */,
 				74C67CE9151F7A3200EE7A9F /* main.m */,
@@ -164,7 +186,10 @@
 			files = (
 				74C67CE8151F7A3200EE7A9F /* InfoPlist.strings in Resources */,
 				74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */,
-				74A7F47D152B63D600B4E56F /* apple.png in Resources */,
+				74A7F484152B711300B4E56F /* twoSquare.storyboard in Resources */,
+				74A7F490152E643600B4E56F /* restaurante.png in Resources */,
+				74A7F491152E643600B4E56F /* bar.png in Resources */,
+				74A7F492152E643600B4E56F /* tienda.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +205,7 @@
 				74C67CF6151F7D4E00EE7A9F /* HZFCheckin.m in Sources */,
 				74C67CF9151F836500EE7A9F /* HZFCheckins.m in Sources */,
 				74772ED3151F94DE0094CBE4 /* HZFCheckinsViewController.m in Sources */,
+				74A7F48C152E5C0A00B4E56F /* HZFCheckinTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

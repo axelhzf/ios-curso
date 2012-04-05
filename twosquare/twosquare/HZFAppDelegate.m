@@ -7,17 +7,12 @@
 //
 
 #import "HZFAppDelegate.h"
-#import "HZFCheckinsViewController.h"
 
 @implementation HZFAppDelegate
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[HZFCheckinsViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

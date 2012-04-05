@@ -25,7 +25,7 @@
 
     HZFCheckin *checkin1 = [[HZFCheckin alloc] init];
     checkin1.nombre = @"Place1";
-    checkin1.categoria = @"Restaurante";
+    checkin1.categoria = @"restaurante";
     checkin1.calificacion = 8;
     checkin1.usuario = @"axelhzf";
     checkin1.fechaCreacion = [NSDate date];
@@ -34,7 +34,7 @@
     
     HZFCheckin *checkin2 = [[HZFCheckin alloc] init];
     checkin2.nombre = @"Place2";
-    checkin2.categoria = @"Tienda";
+    checkin2.categoria = @"tienda";
     checkin2.calificacion = 7;
     checkin2.usuario = @"axelhzf";
     checkin2.fechaCreacion = [NSDate date];  
@@ -43,7 +43,7 @@
 
     HZFCheckin *checkin3 = [[HZFCheckin alloc] init];
     checkin3.nombre = @"Place3";
-    checkin3.categoria = @"Bar";
+    checkin3.categoria = @"bar";
     checkin3.calificacion = 7;
     checkin3.usuario = @"axelhzf";
     checkin3.fechaCreacion = [NSDate date];  
