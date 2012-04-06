@@ -33,8 +33,12 @@
     labelName.text = checkin.nombre;
     labelUser.text = checkin.usuario;
     
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";     
+    static NSDateFormatter* dateFormatter = nil;
+    if(dateFormatter == nil){
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd";     
+    }
+    
     labelDate.text = [dateFormatter stringFromDate:checkin.fechaCreacion];
     
     if([checkin.categoria isEqualToString:@"restaurante"]){
