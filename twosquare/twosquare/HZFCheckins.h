@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *data;
 
-+ (HZFCheckins *)checkinsWithFakeData;
++ (id)sharedInstance;
+- (void)loadFakeData;
 
 @end
