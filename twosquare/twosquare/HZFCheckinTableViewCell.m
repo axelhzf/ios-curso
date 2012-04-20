@@ -30,6 +30,8 @@
 }
 
 - (void)setCheckin:(HZFCheckin *)checkin {
+    _checkin = checkin;
+    
     labelName.text = checkin.nombre;
     labelUser.text = checkin.usuario;
     

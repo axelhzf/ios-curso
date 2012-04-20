@@ -25,6 +25,7 @@
     __strong static id _sharedObject = nil;
     dispatch_once(&pred, ^{
         _sharedObject = [[self alloc] init];
+        [_sharedObject loadFakeData];
     });
     return _sharedObject;
 }
@@ -37,6 +38,8 @@
     checkin1.calificacion = 8;
     checkin1.usuario = @"axelhzf";
     checkin1.fechaCreacion = [NSDate date];
+    checkin1.latitud = 37.4445;
+    checkin1.longitud = -122.1602;
     [self.data addObject:checkin1];
     
     
@@ -46,6 +49,8 @@
     checkin2.calificacion = 7;
     checkin2.usuario = @"axelhzf";
     checkin2.fechaCreacion = [NSDate date];  
+    checkin2.latitud = 48.86223;
+    checkin2.longitud = 2.351074;
     [self.data addObject:checkin2];
     
     
@@ -55,6 +60,8 @@
     checkin3.calificacion = 7;
     checkin3.usuario = @"axelhzf";
     checkin3.fechaCreacion = [NSDate date];  
+    checkin3.latitud = 40.418889;
+    checkin3.longitud = -3.691944;
     [self.data addObject:checkin3];
 }
 

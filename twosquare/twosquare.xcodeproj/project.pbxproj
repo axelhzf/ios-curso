@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		74772ED3151F94DE0094CBE4 /* HZFCheckinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */; };
-		74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */; };
 		74A7F484152B711300B4E56F /* twoSquare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F483152B711300B4E56F /* twoSquare.storyboard */; };
 		74A7F48C152E5C0A00B4E56F /* HZFCheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */; };
 		74A7F490152E643600B4E56F /* restaurante.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F48D152E643600B4E56F /* restaurante.png */; };
@@ -16,6 +15,8 @@
 		74A7F492152E643600B4E56F /* tienda.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A7F48F152E643600B4E56F /* tienda.png */; };
 		74A7F49E152E7AC800B4E56F /* HZFNewCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7F49D152E7AC800B4E56F /* HZFNewCheckinViewController.m */; };
 		74AA073B153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */; };
+		74B4EE181540B81000ACE535 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B4EE171540B81000ACE535 /* MapKit.framework */; };
+		74B4EE1B1540B99E00ACE535 /* HZFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */; };
 		74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDD151F7A3200EE7A9F /* UIKit.framework */; };
 		74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDF151F7A3200EE7A9F /* Foundation.framework */; };
 		74C67CE2151F7A3200EE7A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CE1151F7A3200EE7A9F /* CoreGraphics.framework */; };
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HZFCheckinsViewController.h; path = ../HZFCheckinsViewController.h; sourceTree = "<group>"; };
 		74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HZFCheckinsViewController.m; path = ../HZFCheckinsViewController.m; sourceTree = "<group>"; };
-		74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HZFCheckinsViewController.xib; path = ../HZFCheckinsViewController.xib; sourceTree = "<group>"; };
 		74A7F483152B711300B4E56F /* twoSquare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = twoSquare.storyboard; sourceTree = "<group>"; };
 		74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFCheckinTableViewCell.h; sourceTree = "<group>"; };
 		74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFCheckinTableViewCell.m; sourceTree = "<group>"; };
@@ -40,6 +40,9 @@
 		74A7F49D152E7AC800B4E56F /* HZFNewCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFNewCheckinViewController.m; sourceTree = "<group>"; };
 		74AA0739153355A900AEBBCB /* HZFNewCheckinCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFNewCheckinCategoryViewController.h; sourceTree = "<group>"; };
 		74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFNewCheckinCategoryViewController.m; sourceTree = "<group>"; };
+		74B4EE171540B81000ACE535 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		74B4EE191540B99D00ACE535 /* HZFMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFMapViewController.h; sourceTree = "<group>"; };
+		74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFMapViewController.m; sourceTree = "<group>"; };
 		74C67CD9151F7A3200EE7A9F /* twosquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twosquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C67CDD151F7A3200EE7A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C67CDF151F7A3200EE7A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B4EE181540B81000ACE535 /* MapKit.framework in Frameworks */,
 				74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */,
 				74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */,
 				74C67CE2151F7A3200EE7A9F /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +104,7 @@
 		74C67CDC151F7A3200EE7A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74B4EE171540B81000ACE535 /* MapKit.framework */,
 				74C67CDD151F7A3200EE7A9F /* UIKit.framework */,
 				74C67CDF151F7A3200EE7A9F /* Foundation.framework */,
 				74C67CE1151F7A3200EE7A9F /* CoreGraphics.framework */,
@@ -110,9 +115,9 @@
 		74C67CE3151F7A3200EE7A9F /* twosquare */ = {
 			isa = PBXGroup;
 			children = (
+				74C67CE4151F7A3200EE7A9F /* Supporting Files */,
 				74C67CEC151F7A3200EE7A9F /* HZFAppDelegate.h */,
 				74C67CED151F7A3200EE7A9F /* HZFAppDelegate.m */,
-				74C67CE4151F7A3200EE7A9F /* Supporting Files */,
 				74C67CF4151F7D4E00EE7A9F /* HZFCheckin.h */,
 				74C67CF5151F7D4E00EE7A9F /* HZFCheckin.m */,
 				74C67CF7151F836500EE7A9F /* HZFCheckins.h */,
@@ -121,12 +126,13 @@
 				74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */,
 				74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */,
 				74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */,
-				74772ED2151F94DE0094CBE4 /* HZFCheckinsViewController.xib */,
 				74A7F483152B711300B4E56F /* twoSquare.storyboard */,
 				74AA0739153355A900AEBBCB /* HZFNewCheckinCategoryViewController.h */,
 				74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */,
 				74A7F49C152E7AC800B4E56F /* HZFNewCheckinViewController.h */,
 				74A7F49D152E7AC800B4E56F /* HZFNewCheckinViewController.m */,
+				74B4EE191540B99D00ACE535 /* HZFMapViewController.h */,
+				74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */,
 			);
 			path = twosquare;
 			sourceTree = "<group>";
@@ -195,7 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C67CE8151F7A3200EE7A9F /* InfoPlist.strings in Resources */,
-				74772ED4151F94DE0094CBE4 /* HZFCheckinsViewController.xib in Resources */,
 				74A7F484152B711300B4E56F /* twoSquare.storyboard in Resources */,
 				74A7F490152E643600B4E56F /* restaurante.png in Resources */,
 				74A7F491152E643600B4E56F /* bar.png in Resources */,
@@ -218,6 +223,7 @@
 				74A7F48C152E5C0A00B4E56F /* HZFCheckinTableViewCell.m in Sources */,
 				74A7F49E152E7AC800B4E56F /* HZFNewCheckinViewController.m in Sources */,
 				74AA073B153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m in Sources */,
+				74B4EE1B1540B99E00ACE535 /* HZFMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

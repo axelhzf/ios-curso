@@ -53,6 +53,18 @@
     return cell;
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"toMapView"]){
+        HZFCheckinTableViewCell *cell = (HZFCheckinTableViewCell *)sender;
+        id destination = segue.destinationViewController;
+        SEL setCheckin = @selector(setCheckin:);
+        if([destination respondsToSelector:setCheckin]){
+            [destination performSelector:setCheckin withObject:cell.checkin];
+        }
+    }
+}
+
 #pragma mark - Table view delegate
 
 @end

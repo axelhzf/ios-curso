@@ -73,6 +73,7 @@
                                     <outlet property="labelDate" destination="7nF-KK-Jbw" id="qlc-fE-e4B"/>
                                     <outlet property="labelName" destination="m5W-vI-lSG" id="0Gc-1h-tQt"/>
                                     <outlet property="labelUser" destination="t3S-Mt-Now" id="hI8-hB-Vy9"/>
+                                    <segue destination="HAG-Dd-Yxn" kind="push" identifier="toMapView" id="2rV-HS-ZTP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,6 +93,39 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="-140" y="-959"/>
+        </scene>
+        <!--Map View Controller - Mapa-->
+        <scene sceneID="AUT-Uv-hqu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yno-iZ-FCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="HAG-Dd-Yxn" customClass="HZFMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="35f-c5-0NQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="m4H-7n-3MX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HAG-Dd-Yxn" id="LqR-xj-HEB"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="lmI-KN-XwS">
+                        <barButtonItem key="rightBarButtonItem" title="MapType" id="ZVy-Uu-E3P">
+                            <connections>
+                                <action selector="showMapTypeSelector:" destination="HAG-Dd-Yxn" id="L3J-Kk-dVb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="m4H-7n-3MX" id="hVR-bF-KGf"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="301" y="-959"/>
         </scene>
         <!--New Checkin View Controller - Nuevo Checkin-->
         <scene sceneID="2BV-ps-fMR">
@@ -278,6 +312,39 @@
             <point key="canvasLocation" x="-140" y="-356"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="HZFCheckinTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imgCategory" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="labelDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HZFCheckinsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinsViewController.h"/>
+        </class>
+        <class className="HZFMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFMapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showMapTypeSelector:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="HZFNewCheckinCategoryViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFNewCheckinCategoryViewController.h"/>
+        </class>
+        <class className="HZFNewCheckinViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFNewCheckinViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="hideKeyboard"/>
+                <relationship kind="action" name="save:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="categoryCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="fieldNombre" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
