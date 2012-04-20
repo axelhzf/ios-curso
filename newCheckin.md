@@ -226,15 +226,31 @@ Ahora lo único que falta es que al actualizar la property category en la vista1
 A estas alturas del curso ese código debería ser trivial.
 
 
-# Guardando el nuevo checkin
+#Ejercicio
 
 Nos queda pendiente ver cómo vamos a obtener la geolocalización del usuario. Lo veremos más adelante
 cuando entremos con los detalles del mapa. Así que lo único que nos queda para terminar esta vista es guardar
 el nuevo checkin para que se añada a vista principal.
 
-Al igual que hicimos antes para para mover la información de la categoría de una vista a otra, podríamos mover
- la información del nuevo checkin a la lista de checkins. Para ver algo de código distinto, vamos a convertir
- la lista de checkins en un Singleton y así vemos la forma de implementarlos.
+- Escribe el código que guarda el checkin en la lista de checkins
+
+**Tips:**
+
+- Debes comunicar las vistas a través de los Segue al igual que hicimos
+con la vista de las categorias.
+- Es normal que al añadir un elemento al array no aparezca en la tabla. Debemos
+indicarla a la tabla que los datos han cambiado y que se tiene que volver a pintar.
+Busca el método `reloadData` de `UITableView`.
+- Para volver a la vista anterior utiliza
+
+        [self.navigationController popViewControllerAnimated:YES];
+
+# Solucion
+
+En este caso vamos a hacer el ejercicio de una forma diferente a la que se pedía y que habíamos
+visto anteriormente. En vez de conectar las dos vistas mediantes el Segue que las une, vamos a hacer
+que la lista de checkins sea un singleton, de manera que podamos a acceder a el desde la dos vistas. No
+es la forma más correcta de hacerlo, pero así vemos como es el código de un singleton.
 
 Existen varias formas de implementar el patron Singleton. En este post
 [http://lukeredpath.co.uk/blog/a-note-on-objective-c-singletons.html](http://lukeredpath.co.uk/blog/a-note-on-objective-c-singletons.html)
@@ -266,12 +282,12 @@ El método save de la vista quedaría de la siguiente forma
         [self.navigationController popViewControllerAnimated:YES];
     }
 
-Si probamos este código veremos un comportamiento extraño. Cuando añadimos un elemento y volvemos a la tabla
-principal, este elemento no aparece. Esto es porque debemos decirle a la tabla que recargue sus datos.
+Como comenté en el tip, no basta con añadir los métodos al array, debemos indicarle a la tabla que se
+debe repintar.
 
     - (void)viewWillAppear:(BOOL)animated {
         [self.tableView reloadData];
     }
 
-De esta forma cada vez que la vista vaya a aparecer, recargará los datos porque es posible que la lista
-de checkins haya cambiado.
+Al poner la llamada en el método `viewWillAppear`, cada vez que la vista vaya a aparecer la vista,
+recargará los datos porque es posible que el array de checkins haya cambiado.
