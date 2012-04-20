@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZFNewCheckinCategoryViewController : UITableViewController
+@interface HZFNewCheckinCategoryViewController : UITableViewController 
 
 @property (strong, nonatomic) NSArray *categories;
 @property NSString *selectedCategory;

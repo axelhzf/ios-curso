@@ -17,6 +17,7 @@
 		74AA073B153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */; };
 		74B4EE181540B81000ACE535 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B4EE171540B81000ACE535 /* MapKit.framework */; };
 		74B4EE1B1540B99E00ACE535 /* HZFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */; };
+		74B4EE2B1541F47000ACE535 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B4EE2A1541F47000ACE535 /* CoreLocation.framework */; };
 		74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDD151F7A3200EE7A9F /* UIKit.framework */; };
 		74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CDF151F7A3200EE7A9F /* Foundation.framework */; };
 		74C67CE2151F7A3200EE7A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C67CE1151F7A3200EE7A9F /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		74B4EE171540B81000ACE535 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		74B4EE191540B99D00ACE535 /* HZFMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFMapViewController.h; sourceTree = "<group>"; };
 		74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFMapViewController.m; sourceTree = "<group>"; };
+		74B4EE2A1541F47000ACE535 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		74C67CD9151F7A3200EE7A9F /* twosquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twosquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C67CDD151F7A3200EE7A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C67CDF151F7A3200EE7A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B4EE2B1541F47000ACE535 /* CoreLocation.framework in Frameworks */,
 				74B4EE181540B81000ACE535 /* MapKit.framework in Frameworks */,
 				74C67CDE151F7A3200EE7A9F /* UIKit.framework in Frameworks */,
 				74C67CE0151F7A3200EE7A9F /* Foundation.framework in Frameworks */,
@@ -82,6 +85,48 @@
 				74A7F48F152E643600B4E56F /* tienda.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		74B4EE251541EDCB00ACE535 /* newCheckin */ = {
+			isa = PBXGroup;
+			children = (
+				74AA0739153355A900AEBBCB /* HZFNewCheckinCategoryViewController.h */,
+				74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */,
+				74A7F49C152E7AC800B4E56F /* HZFNewCheckinViewController.h */,
+				74A7F49D152E7AC800B4E56F /* HZFNewCheckinViewController.m */,
+			);
+			name = newCheckin;
+			sourceTree = "<group>";
+		};
+		74B4EE271541EDDE00ACE535 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				74B4EE191540B99D00ACE535 /* HZFMapViewController.h */,
+				74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		74B4EE281541EDFD00ACE535 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				74C67CF4151F7D4E00EE7A9F /* HZFCheckin.h */,
+				74C67CF5151F7D4E00EE7A9F /* HZFCheckin.m */,
+				74C67CF7151F836500EE7A9F /* HZFCheckins.h */,
+				74C67CF8151F836500EE7A9F /* HZFCheckins.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		74B4EE291541EE0D00ACE535 /* mainView */ = {
+			isa = PBXGroup;
+			children = (
+				74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */,
+				74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */,
+				74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */,
+				74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */,
+			);
+			name = mainView;
 			sourceTree = "<group>";
 		};
 		74C67CCE151F7A3200EE7A9F = {
@@ -104,6 +149,7 @@
 		74C67CDC151F7A3200EE7A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74B4EE2A1541F47000ACE535 /* CoreLocation.framework */,
 				74B4EE171540B81000ACE535 /* MapKit.framework */,
 				74C67CDD151F7A3200EE7A9F /* UIKit.framework */,
 				74C67CDF151F7A3200EE7A9F /* Foundation.framework */,
@@ -118,21 +164,11 @@
 				74C67CE4151F7A3200EE7A9F /* Supporting Files */,
 				74C67CEC151F7A3200EE7A9F /* HZFAppDelegate.h */,
 				74C67CED151F7A3200EE7A9F /* HZFAppDelegate.m */,
-				74C67CF4151F7D4E00EE7A9F /* HZFCheckin.h */,
-				74C67CF5151F7D4E00EE7A9F /* HZFCheckin.m */,
-				74C67CF7151F836500EE7A9F /* HZFCheckins.h */,
-				74C67CF8151F836500EE7A9F /* HZFCheckins.m */,
-				74772ED0151F94DE0094CBE4 /* HZFCheckinsViewController.h */,
-				74772ED1151F94DE0094CBE4 /* HZFCheckinsViewController.m */,
-				74A7F48A152E5C0A00B4E56F /* HZFCheckinTableViewCell.h */,
-				74A7F48B152E5C0A00B4E56F /* HZFCheckinTableViewCell.m */,
 				74A7F483152B711300B4E56F /* twoSquare.storyboard */,
-				74AA0739153355A900AEBBCB /* HZFNewCheckinCategoryViewController.h */,
-				74AA073A153355A900AEBBCB /* HZFNewCheckinCategoryViewController.m */,
-				74A7F49C152E7AC800B4E56F /* HZFNewCheckinViewController.h */,
-				74A7F49D152E7AC800B4E56F /* HZFNewCheckinViewController.m */,
-				74B4EE191540B99D00ACE535 /* HZFMapViewController.h */,
-				74B4EE1A1540B99D00ACE535 /* HZFMapViewController.m */,
+				74B4EE281541EDFD00ACE535 /* model */,
+				74B4EE291541EE0D00ACE535 /* mainView */,
+				74B4EE251541EDCB00ACE535 /* newCheckin */,
+				74B4EE271541EDDE00ACE535 /* map */,
 			);
 			path = twosquare;
 			sourceTree = "<group>";

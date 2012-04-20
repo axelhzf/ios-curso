@@ -17,17 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     self.categories = nil;
     self.delegate = nil;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+        
     if([delegate respondsToSelector:@selector(setCategory:)]){
         [delegate setValue:[self selectedCategory] forKey:@"category"];
     }

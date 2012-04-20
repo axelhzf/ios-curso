@@ -206,13 +206,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Latitud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="C5H-EO-3TE">
-                                                    <rect key="frame" x="10" y="15" width="67" height="15"/>
+                                                    <rect key="frame" x="10" y="14" width="67" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="12.2342345" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="d6d-uk-nJU">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="d6d-uk-nJU">
                                                     <rect key="frame" x="83" y="12" width="80" height="19"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -231,13 +231,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Longitud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="tx1-5Q-dH2">
-                                                    <rect key="frame" x="10" y="15" width="67" height="15"/>
+                                                    <rect key="frame" x="10" y="14" width="67" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="23.1234234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="dzf-nd-hi3">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="dzf-nd-hi3">
                                                     <rect key="frame" x="83" y="12" width="80" height="19"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -266,6 +266,8 @@
                     <connections>
                         <outlet property="categoryCell" destination="EEK-ja-cod" id="iGW-bA-Rin"/>
                         <outlet property="fieldNombre" destination="uHe-1n-sUG" id="sdv-Fv-WpD"/>
+                        <outlet property="latitudeCell" destination="vbV-m9-smb" id="gqi-Id-LkY"/>
+                        <outlet property="longitudeCell" destination="cH6-Dp-KHV" id="HxX-8N-bTX"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -342,6 +344,8 @@
                 <relationship kind="action" name="save:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="categoryCell" candidateClass="UITableViewCell"/>
                 <relationship kind="outlet" name="fieldNombre" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="latitudeCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="longitudeCell" candidateClass="UITableViewCell"/>
             </relationships>
         </class>
     </classes>
