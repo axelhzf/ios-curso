@@ -42,6 +42,7 @@ Para empezar el rastreo de la posición del usuario
 
         [locationManager startUpdatingLocation];
 
+> Mientras estás depurando la aplicación puedes simular cambios de posición desde el menú `Depurar/Ubicación` pero es especialmente importante que toda aplicación que haga uso de sensores se pruebe en un dispositivo físico.
 
 # Ejercicio
 
