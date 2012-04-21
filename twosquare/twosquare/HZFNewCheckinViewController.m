@@ -74,6 +74,12 @@
     [self.fieldNombre resignFirstResponder];
 }
 
+- (NSString *)usernameFromSettings {
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:@"username"];
+}
+
+
 - (IBAction)save:(UIBarButtonItem *)sender {    
     HZFCheckin *checkin = [[HZFCheckin alloc] init];
     checkin.nombre = self.fieldNombre.text;
@@ -81,6 +87,9 @@
     checkin.categoria = self.category;
     checkin.latitud = self.lastLocation.coordinate.latitude;
     checkin.longitud = self.lastLocation.coordinate.longitude;
+    
+    checkin.usuario = [self usernameFromSettings];
+    
     
     HZFCheckins *checkins = [HZFCheckins sharedInstance];
     [checkins.data addObject:checkin];
