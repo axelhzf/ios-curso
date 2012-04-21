@@ -1,1 +1,8 @@
 .DS_Store
+*.iml
+*.ipr
+*.iws
+webservice/test-result
+webservice/tmp
+webservice/db
+webservice/modules
