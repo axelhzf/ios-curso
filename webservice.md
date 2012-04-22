@@ -257,3 +257,9 @@ El método que realiza la petición al servidor
     
         [data addObject:checkin];
     }
+    
+    
+
+Código:
+
+[https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6]()
