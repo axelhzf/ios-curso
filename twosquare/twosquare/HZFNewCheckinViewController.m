@@ -92,7 +92,7 @@
     
     
     HZFCheckins *checkins = [HZFCheckins sharedInstance];
-    [checkins.data addObject:checkin];
+    [checkins addCheckin:checkin];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

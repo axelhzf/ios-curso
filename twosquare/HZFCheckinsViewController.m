@@ -11,6 +11,8 @@
 #import "HZFCheckin.h"
 #import "HZFCheckinTableViewCell.h"
 
+#define kHZFQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
 @interface HZFCheckinsViewController ()
 
 @end
@@ -30,8 +32,31 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self fetch];
+}
+
+- (void)fetch{
+    dispatch_async(kHZFQueue, ^{
+        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://axelhzf-ios-tut.herokuapp.com/api/checkins"]];
+        NSError* error;
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:kNilOptions
+                                                               error:&error];
+        NSMutableArray *jsonCheckins = [NSMutableArray array];
+        for(NSDictionary *jsonElement in jsonArray){
+            HZFCheckin *checkin = [HZFCheckin checkinFromDictionary:jsonElement];
+            [jsonCheckins addObject:checkin];
+        }
+        [self performSelectorOnMainThread:@selector(fetchedCheckins:) withObject:jsonCheckins waitUntilDone:NO];
+    });
+}
+
+
+- (void)fetchedCheckins:(NSMutableArray *)fetchedCheckins {
+    self.checkins.data = fetchedCheckins;
     [self.tableView reloadData];
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);

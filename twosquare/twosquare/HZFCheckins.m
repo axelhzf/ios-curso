@@ -65,4 +65,13 @@
     [self.data addObject:checkin3];
 }
 
+- (void)addCheckin:(HZFCheckin *)checkin {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://axelhzf-ios-tut.herokuapp.com/api/checkins"]];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[checkin toJson]];
+    [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    [data addObject:checkin];
+}
+
 @end

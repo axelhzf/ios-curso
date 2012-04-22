@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class HZFCheckin;
+
 @interface HZFCheckins : NSObject
 
 @property (strong, nonatomic) NSMutableArray *data;
 
 + (id)sharedInstance;
 - (void)loadFakeData;
+- (void)addCheckin:(HZFCheckin *)checkin;
 
 @end
