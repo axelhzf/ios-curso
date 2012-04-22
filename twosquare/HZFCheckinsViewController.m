@@ -80,7 +80,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"toMapView"]){
+    if([segue.identifier isEqualToString:@"toCheckinView"]){
         HZFCheckinTableViewCell *cell = (HZFCheckinTableViewCell *)sender;
         id destination = segue.destinationViewController;
         SEL setCheckin = @selector(setCheckin:);

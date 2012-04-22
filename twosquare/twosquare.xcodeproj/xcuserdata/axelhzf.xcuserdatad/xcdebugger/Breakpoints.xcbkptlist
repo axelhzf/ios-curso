@@ -146,5 +146,31 @@
          landmarkName = "-toJson"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewController.h"
+         timestampString = "356810638.627676"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "@interface UITableViewController"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "twosquare/HZFCheckinViewController.m"
+         timestampString = "356812454.655907"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
+         landmarkName = "-mailComposeController:didFinishWithResult:error:"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

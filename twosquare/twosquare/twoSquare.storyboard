@@ -73,7 +73,7 @@
                                     <outlet property="labelDate" destination="7nF-KK-Jbw" id="qlc-fE-e4B"/>
                                     <outlet property="labelName" destination="m5W-vI-lSG" id="0Gc-1h-tQt"/>
                                     <outlet property="labelUser" destination="t3S-Mt-Now" id="hI8-hB-Vy9"/>
-                                    <segue destination="HAG-Dd-Yxn" kind="push" identifier="toMapView" id="2rV-HS-ZTP"/>
+                                    <segue destination="eBY-uC-P4f" kind="push" identifier="toCheckinView" id="oS1-ai-iyh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -125,7 +125,93 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="301" y="-959"/>
+            <point key="canvasLocation" x="853" y="-959"/>
+        </scene>
+        <!--Checkin View Controller - Checkin-->
+        <scene sceneID="Rdg-FG-MRg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhw-ww-MH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="eBY-uC-P4f" customClass="HZFCheckinViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6j1-lE-Fdr">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Ver" id="Lw2-66-uAv">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="IAh-v9-KWj" style="IBUITableViewCellStyleDefault" id="6TB-Rf-Qh4">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Mapa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="IAh-v9-KWj">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="HAG-Dd-Yxn" kind="push" identifier="toMapView" id="Yo9-p2-hHC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Compartir" id="kXf-2F-gFG">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="svF-RQ-GSY" style="IBUITableViewCellStyleDefault" id="rQs-B6-uaz">
+                                        <rect key="frame" x="0.0" y="138" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="svF-RQ-GSY">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="rcO-tY-IaW" style="IBUITableViewCellStyleDefault" id="uWd-gG-mbb">
+                                        <rect key="frame" x="0.0" y="183" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Correo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="rcO-tY-IaW">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="eBY-uC-P4f" id="6L4-xT-qcs"/>
+                            <outlet property="delegate" destination="eBY-uC-P4f" id="Ou2-Nd-4at"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checkin" id="RYD-Zd-oOM"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="393" y="-959"/>
         </scene>
         <!--New Checkin View Controller - Nuevo Checkin-->
         <scene sceneID="2BV-ps-fMR">
@@ -323,6 +409,9 @@
                 <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="HZFCheckinViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinViewController.h"/>
         </class>
         <class className="HZFCheckinsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinsViewController.h"/>
