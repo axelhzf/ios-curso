@@ -20,4 +20,7 @@
 @property (copy, nonatomic) NSString *usuario;
 @property (strong, nonatomic) NSDate *fechaCreacion;
 
++ (HZFCheckin *)checkinFromDictionary:(NSDictionary *)dictionary;
+- (NSData *)toJson;
+
 @end
