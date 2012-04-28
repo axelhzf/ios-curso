@@ -63,6 +63,14 @@ Si el método que se ejecuta es demasiado rápido, puedes poner un temporizador
 
 En este método el delay viene dado en segundo.
 
+## Bonus
+
+Puedes probar las opciones de personalización de la librería
+
+	tableView.pullToRefreshView.arrowColor = [UIColor whiteColor];
+	tableView.pullToRefreshView.textColor = [UIColor whiteColor];
+	tableView.pullToRefreshView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+
 
 ## Solución
 
