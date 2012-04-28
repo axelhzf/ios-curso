@@ -3,7 +3,7 @@ layout : default
 title : Compartir
 ---
 
-# Compartir vía twitter
+## Compartir vía twitter
 
 A partir de iOS 5 twitter viene integrado directamente con el sistema y se puso a disposición de los usuarios una API con la que es muy sencillo enviar tweets desde la propia aplicación.
 
@@ -19,7 +19,7 @@ de utilizar
 
 > Para realizar las pruebas cree una cuenta de twitter, puedes utilizarla o utilizar tu propia cuenta si lo prefieres. Las credenciales son:  iostwosquare / twosquare
 
-# Compartir vía email
+## Compartir vía email
 
 En este caso la librería está disponible a partir de iOS 3 y se llama `MessageUI.framework`.
 
@@ -41,13 +41,13 @@ Nuestra clase debe implementar el protocolo `MFMailComposeViewControllerDelegate
         [self dismissModalViewControllerAnimated:YES];
     }
 
-# Ejercicio
+## Ejercicio
 
-* Añadir una pantalla que permita compartir checkins vía twitter y vía email
+Añadir una pantalla que permita compartir checkins vía twitter y vía email
 
-# Solución
+## Solución
 
-El código es básicamente el twitter. Para no repetirlo dejo únicamente el enlace al código.
+El código es el explicado anteriormente. Para no repetirlo dejo únicamente el enlace al código.
 
 [https://github.com/axelhzf/ios-curso/commit/00416c084e1734667eac67913ff5f4758bd61f85]()
 

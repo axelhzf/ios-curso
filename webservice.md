@@ -3,7 +3,7 @@ layout : default
 title : Webservice
 ---
 
-# Persistencia
+## Persistencia
 
 A la hora de persistir los datos de la aplicación existen varias alternativas
 
@@ -22,34 +22,34 @@ conectividad utilizar los últimos datos almacenados en base de datos. En este c
 cada uno desde su aplicación. Si estás interesado en ver cómo funcionan el resto de sistemas,
 dejo algunos enlaces a tutoriales.
 
-* [http://www.raywenderlich.com/11944/core-data-tutorial-updated-for-ios-5]()
-* [http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/GettingStartedWithCoreData/_index.html]()
-* [http://kurrytran.blogspot.com.es/2011/08/ios-5-tutorial-part-i-sqlite.html]()
+* [http://www.raywenderlich.com/11944/core-data-tutorial-updated-for-ios-5](http://www.raywenderlich.com/11944/core-data-tutorial-updated-for-ios-5)
+* [http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/GettingStartedWithCoreData/_index.html](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/GettingStartedWithCoreData/_index.html)
+* [http://kurrytran.blogspot.com.es/2011/08/ios-5-tutorial-part-i-sqlite.html](http://kurrytran.blogspot.com.es/2011/08/ios-5-tutorial-part-i-sqlite.html)
 
-# Web service
+## Web service
 
 El webservice que vamos a utilizar va a ser REST y el formato de comunicación de los datos va
 a ser JSON. Está escrito en Java utilizando en Play!Framework y el código fuente está disponible
 en el repositorio
 
-[https://github.com/axelhzf/ios-curso/tree/master/webservice]()
+[https://github.com/axelhzf/ios-curso/tree/master/webservice](https://github.com/axelhzf/ios-curso/tree/master/webservice)
 
-El webservice está desplegado en [http://www.heroku.com/](heroku) en la dirección:
+El webservice está desplegado en [heroku](http://www.heroku.com/) en la dirección:
 
-[http://axelhzf-ios-tut.herokuapp.com/]()
+[http://axelhzf-ios-tut.herokuapp.com/](http://axelhzf-ios-tut.herokuapp.com/)
 
 Desde esta pantalla podemos gestionar los checkins que tenemos almacenados en la base de datos.
 Los métodos de la API JSON son:
 
 **Obtener lista de checkins**
 
-GET  [http://axelhzf-ios-tut.herokuapp.com/api/checkins]()
+GET  [http://axelhzf-ios-tut.herokuapp.com/api/checkins](http://axelhzf-ios-tut.herokuapp.com/api/checkins)
 
 **Crear nuevo checkin**
 
-POST [http://axelhzf-ios-tut.herokuapp.com/api/checkins]()
+POST [http://axelhzf-ios-tut.herokuapp.com/api/checkins](http://axelhzf-ios-tut.herokuapp.com/api/checkins)
 
-# Consumir un servicio web
+## Consumir un servicio web
 
 Para consumir el servicio web debemos hacer una petición HTTP a la URL del servicio web. Esta
 petición la debemos hacer de forma asíncrona si no queremos que la aplicación se quede congelada
@@ -58,13 +58,13 @@ que trabajar con un hilo independiente, que va a estar pendiente de que el servi
 
 Para esto tenemos varias alternativas:
 
-* NSURLConnection [http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html]()
-* ASIHTTPRequest [http://allseeing-i.com/ASIHTTPRequest/]() (descontinueada)
+* NSURLConnection [http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html)
+* ASIHTTPRequest [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/) (descontinuaada)
 
 Y la alternativa que vamos a utilizar, que es realizar una petición síncrona, pero no en un hilo
 principal. Para ello vamos a utilizar el Grand Central Dispatch.
 
-# Grand Central Dispathc (GCD)
+## Grand Central Dispathc (GCD)
 
 [Grand Central Dispatch (GCD)](https://developer.apple.com/library/mac/#featuredarticles/BlocksGCD/_index.html).
 está disponible desde la versión 10.6 de OS X y iOS 4. GCD es una tecnología para optimizar el
@@ -111,7 +111,7 @@ el método
     [self performSelectorOnMainThread:@selector(method:) withObject:param waitUntilDone:NO];
 
 
-# HTTP Request y Json Parser
+## HTTP Request y Json Parser
 
 Para realizaar una petición de forma síncrona podemos utilizar el método
 
@@ -128,7 +128,7 @@ La respuesta que obtengamos del servidor ahora la debemos parsear. Para ello, a 
 Con este método parseamos el json en un NSDictionary o un NSArray (dependiente de la estructura
 con la que venga el JSON).
 
-# Ejercicio
+## Ejercicio
 
 - Crea una `dispatch_queue_t`
 - Crea un bloque asíncrono que realice la petición al servidor y parsee el json
@@ -139,7 +139,7 @@ con la que venga el JSON).
 
 - El formato en el que viene la fecha es ddMMMyyyy HH:mm:ss
 
-# Solución
+## Solución
 
 Definición de la cola global
 
@@ -199,7 +199,7 @@ Por último falta realizar la llamada a recuperar los datos del servidor
         [self fetch];
     }
 
-# Creando un nuevo checkin en el servidor
+## Creando un nuevo checkin en el servidor
 
 Siguiendo los principios REST, para crear un nuevo checkin se realize una petición POST. El body de la petición son los datos en formato JSON.
 
@@ -215,11 +215,11 @@ Para realizar una petición HTTP de forma síncrona
     [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
 
 
-# Ejercicio
+## Ejercicio
 
 - Cuando se cree un nuevo checkin realiza una petición al servidor para que se almacene el nuevo checkin
 
-# Solución
+## Solución
 
 Añadimos un método en la clase checkin que transforma el objeto a formato JSON
 
@@ -262,4 +262,4 @@ El método que realiza la petición al servidor
 
 Código:
 
-[https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6]()
+[https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6](https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6)

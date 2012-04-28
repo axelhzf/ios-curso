@@ -3,7 +3,7 @@ layout : default
 title : Pull to refresh
 ---
 
-# Pull to refresh
+## Pull to refresh
 
 Pull to refresh es un recurso de interfaz de usuario. Se aplica principalmente en tablas y sirve para actualizar la información. El creador de la interfaz es el autor de Tweetie, una cliente de twitter para iOS que posteriormente fue comprado por Twitter.
 
@@ -18,7 +18,7 @@ Para añadir este comportamiento a nuestra aplicación vamos a utilizar la libre
 Documentación : [http://samvermette.com/314]()
 Código fuente : [https://github.com/samvermette/SVPullToRefresh]()
 
-# Uso de SVPullToRefresh
+## Uso de SVPullToRefresh
 
 Los pasos para utilizar la librería son:
 
@@ -36,7 +36,7 @@ Lo que nos falta es definir qué método se va a ejecutar.
 	}];
 
 
-# Capturing 'self' strongly in this block is likely to lead to a retain cycle
+## Capturing 'self' strongly in this block is likely to lead to a retain cycle
 
 Los bloques hacen una referencia strong de las variables que utilizan, por lo tanto, normalmente cuando se utilizan variables dentro del bloque, tendrémos un warning del tipo "Capturing 'self' strongly in this block is likely to lead to a retain cycle”. Puedes leer más acerca del tema en:
 
