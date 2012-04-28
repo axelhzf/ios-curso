@@ -24,15 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.checkins = [HZFCheckins sharedInstance];
+    
+    
+    __weak HZFCheckinsViewController *weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{                        
+        [weakSelf performSelector:@selector(fetch) withObject:nil afterDelay:2];
+    }];
 }
 
 - (void)viewDidUnload{
     [super viewDidUnload];
     self.checkins = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [self fetch];
 }
 
 - (void)fetch{
@@ -51,10 +53,10 @@
     });
 }
 
-
 - (void)fetchedCheckins:(NSMutableArray *)fetchedCheckins {
     self.checkins.data = fetchedCheckins;
     [self.tableView reloadData];
+    [self.tableView.pullToRefreshView stopAnimating];
 }
 
 
