@@ -26,6 +26,8 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>twoSquare</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>twoSquare_iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -55,7 +55,7 @@ typedef NSUInteger SVPullToRefreshState;
     self.scrollView = scrollView;
     [_scrollView addSubview:self];
     
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(ceil(self.superview.bounds.size.width*0.21+44), 20, 150, 20)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(ceil(self.scrollView.contentSize.width*0.21+44), 20, 150, 20)];
     titleLabel.text = NSLocalizedString(@"Pull to refresh...",);
     titleLabel.font = [UIFont boldSystemFontOfSize:14];
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -83,7 +83,7 @@ typedef NSUInteger SVPullToRefreshState;
 - (UIImageView *)arrow {
     if(!arrow) {
         arrow = [[UIImageView alloc] initWithImage:self.arrowImage];
-        arrow.frame = CGRectMake(ceil(self.superview.bounds.size.width*0.21), 6, 22, 48);
+        arrow.frame = CGRectMake(ceil(self.scrollView.contentSize.width*0.21), 6, 22, 48);
         arrow.backgroundColor = [UIColor clearColor];
     }
     return arrow;

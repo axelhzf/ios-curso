@@ -25,7 +25,6 @@
 @synthesize longitudeCell;
 @synthesize fieldNombre, gestureRecognizer, category, locationManager, lastLocation;
 
-
 - (void)initLocationManager {
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -58,6 +57,7 @@
     [self setCategoryCell:nil];
     [self setLatitudeCell:nil];
     [self setLongitudeCell:nil];
+        
     [super viewDidUnload];
 }
 
@@ -67,7 +67,11 @@
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
 }
 
 - (IBAction)hideKeyboard {
@@ -94,9 +98,17 @@
     HZFCheckins *checkins = [HZFCheckins sharedInstance];
     [checkins addCheckin:checkin];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self dismissModalViewControllerAnimated:YES];        
+    }
 }
 
+- (IBAction)cancelButton:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIViewController *destination = segue.destinationViewController;

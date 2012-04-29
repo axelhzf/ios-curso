@@ -11,7 +11,7 @@
 
 @class HZFCheckin;
 
-@interface HZFMapViewController : UIViewController <MKMapViewDelegate, UIActionSheetDelegate> 
+@interface HZFMapViewController : UIViewController <MKMapViewDelegate, UIActionSheetDelegate, UISplitViewControllerDelegate> 
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 

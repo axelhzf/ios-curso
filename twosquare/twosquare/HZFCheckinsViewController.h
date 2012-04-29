@@ -10,9 +10,12 @@
 #import "SVPullToRefresh.h"
 
 @class HZFCheckins;
+@class HZFMapViewController;
 
 @interface HZFCheckinsViewController : UITableViewController
 
 @property (nonatomic, strong) HZFCheckins *checkins;
+
+@property (nonatomic, strong) HZFMapViewController *mapViewController;
 
 @end

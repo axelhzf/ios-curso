@@ -33,6 +33,7 @@
 		74DE7C2C154C6AEB000D157B /* SVPullToRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74DE7C29154C6AEB000D157B /* SVPullToRefresh.bundle */; };
 		74DE7C2D154C6AEB000D157B /* SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DE7C2B154C6AEB000D157B /* SVPullToRefresh.m */; };
 		74DE7C37154C6CA8000D157B /* HZFCheckinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DE7C36154C6C3C000D157B /* HZFCheckinsViewController.m */; };
+		74DE7C70154CC664000D157B /* twoSquare_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DE7C6F154CC664000D157B /* twoSquare_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		74DE7C2B154C6AEB000D157B /* SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPullToRefresh.m; sourceTree = "<group>"; };
 		74DE7C35154C6C3C000D157B /* HZFCheckinsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZFCheckinsViewController.h; sourceTree = "<group>"; };
 		74DE7C36154C6C3C000D157B /* HZFCheckinsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZFCheckinsViewController.m; sourceTree = "<group>"; };
+		74DE7C6F154CC664000D157B /* twoSquare_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = twoSquare_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				74C67CEC151F7A3200EE7A9F /* HZFAppDelegate.h */,
 				74C67CED151F7A3200EE7A9F /* HZFAppDelegate.m */,
 				74A7F483152B711300B4E56F /* twoSquare.storyboard */,
+				74DE7C6F154CC664000D157B /* twoSquare_iPad.storyboard */,
 				74B4EE281541EDFD00ACE535 /* model */,
 				74B4EE291541EE0D00ACE535 /* mainView */,
 				74B4EE251541EDCB00ACE535 /* newCheckin */,
@@ -287,6 +290,7 @@
 				74A7F492152E643600B4E56F /* tienda.png in Resources */,
 				74B4EE2D1542AEE400ACE535 /* Settings.bundle in Resources */,
 				74DE7C2C154C6AEB000D157B /* SVPullToRefresh.bundle in Resources */,
+				74DE7C70154CC664000D157B /* twoSquare_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +382,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twosquare/twosquare-Prefix.pch";
 				INFOPLIST_FILE = "twosquare/twosquare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,8 +395,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twosquare/twosquare-Prefix.pch";
 				INFOPLIST_FILE = "twosquare/twosquare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

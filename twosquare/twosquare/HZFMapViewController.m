@@ -10,11 +10,15 @@
 #import "HZFCheckin.h"
 
 @interface HZFMapViewController ()
-
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+- (void)configureView;
 @end
 
 @implementation HZFMapViewController
+
 @synthesize mapView = _mapView, checkin;
+
+@synthesize masterPopoverController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,7 +61,11 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
@@ -85,7 +93,7 @@
         case 0:
             self.mapView.mapType = MKMapTypeStandard;
             break;
-
+            
         case 1:
             self.mapView.mapType = MKMapTypeHybrid;
             break;
@@ -99,5 +107,37 @@
     }
 }
 
+- (void)configureView {    
+    if (self.checkin) {
+        self.title = [self.checkin nombre];
+        [self showCheckinAnnotation];
+        [self centerMapInCheckin];
+    }
+}
+
+- (void)setCheckin:(HZFCheckin *)newCheckin {
+    if (![checkin.nombre isEqualToString:newCheckin.nombre]) {
+        checkin = newCheckin;
+        [self configureView];
+    }
+    
+    if (self.masterPopoverController != nil) {
+        [self.masterPopoverController dismissPopoverAnimated:YES];
+    }        
+}
+
+#pragma mark - Split view
+
+- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController {
+    barButtonItem.title = NSLocalizedString(@"Checkins", @"Checkins");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    self.masterPopoverController = popoverController;
+}
+
+- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
+}
 
 @end

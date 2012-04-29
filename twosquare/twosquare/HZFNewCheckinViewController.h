@@ -22,4 +22,6 @@
 - (IBAction)hideKeyboard;
 - (IBAction)save:(UIBarButtonItem *)sender;
 
+- (IBAction)cancelButton:(id)sender;
+
 @end

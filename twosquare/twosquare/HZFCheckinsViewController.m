@@ -10,6 +10,7 @@
 #import "HZFCheckins.h"
 #import "HZFCheckin.h"
 #import "HZFCheckinTableViewCell.h"
+#import "HZFMapViewController.h"
 
 #define kHZFQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -19,12 +20,13 @@
 
 @implementation HZFCheckinsViewController
 
-@synthesize checkins;
+@synthesize checkins, mapViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.checkins = [HZFCheckins sharedInstance];
     
+    self.mapViewController = (HZFMapViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     __weak HZFCheckinsViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{                        
@@ -61,7 +63,11 @@
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
 }
 
 #pragma mark - Table view data source
@@ -78,6 +84,13 @@
     cell.checkin = checkin;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        HZFCheckin *checkin = [checkins.data objectAtIndex: indexPath.row]; 
+        self.mapViewController.checkin = checkin;
+    }
 }
 
 
