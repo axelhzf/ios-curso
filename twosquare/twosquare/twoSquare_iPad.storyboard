@@ -39,14 +39,82 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Checkin" id="P3i-QG-7Ry">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="TSh-hS-YSx"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="TSh-hS-YSx">
+                            <connections>
+                                <action selector="showPopover:" destination="DHF-7g-UH6" id="uLv-2F-NUv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="pXw-0k-E5B" id="vJ0-1D-gBi"/>
+                        <segue destination="5JP-4m-XGw" kind="popover" identifier="showPopover" popoverAnchorBarButtonItem="TSh-hS-YSx" id="IXv-VQ-bpe">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1470" y="301"/>
+            <point key="canvasLocation" x="1497" y="265"/>
+        </scene>
+        <!--Checkin View Controller-->
+        <scene sceneID="RNb-gP-qWZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oH-gX-lWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="5JP-4m-XGw" customClass="HZFCheckinViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gKc-2E-SKO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <sections>
+                            <tableViewSection headerTitle="Compartir" id="1rE-jh-9la">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ZKF-cx-nCK" style="IBUITableViewCellStyleDefault" id="qiQ-il-vw4">
+                                        <rect key="frame" x="0.0" y="34" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="ZKF-cx-nCK">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="97d-Km-kb5" style="IBUITableViewCellStyleDefault" id="NSK-WQ-Y1b">
+                                        <rect key="frame" x="0.0" y="79" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="97d-Km-kb5">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="5JP-4m-XGw" id="PeI-4g-SqD"/>
+                            <outlet property="delegate" destination="5JP-4m-XGw" id="xre-a5-5qX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2250" y="371"/>
         </scene>
         <!--Checkins View Controller - Checkins-->
         <scene sceneID="PeO-pj-Uin">
@@ -357,6 +425,9 @@
                 <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="HZFCheckinViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinViewController.h"/>
+        </class>
         <class className="HZFCheckinsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFCheckinsViewController.h"/>
         </class>
@@ -364,6 +435,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HZFMapViewController.h"/>
             <relationships>
                 <relationship kind="action" name="showMapTypeSelector:"/>
+                <relationship kind="action" name="showPopover:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

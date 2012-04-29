@@ -18,5 +18,6 @@
 @property (strong, nonatomic) HZFCheckin *checkin;
 
 - (IBAction)showMapTypeSelector:(id)sender;
+- (IBAction)showPopover:(id)sender;
 
 @end

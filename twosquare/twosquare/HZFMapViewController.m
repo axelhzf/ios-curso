@@ -11,12 +11,14 @@
 
 @interface HZFMapViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) UIPopoverController *sharePopover;
 - (void)configureView;
 @end
 
 @implementation HZFMapViewController
 
 @synthesize mapView = _mapView, checkin;
+@synthesize sharePopover;
 
 @synthesize masterPopoverController;
 
@@ -87,6 +89,24 @@
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Tipo de mapa" delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Standard", @"Hybrid", @"Satellite", nil];
     [actionSheet showInView:self.view];
 }
+
+- (IBAction)showPopover:(id)sender {
+    if(self.sharePopover){
+        [self.sharePopover dismissPopoverAnimated:YES];
+    }else{
+        [self performSegueWithIdentifier:@"showPopover" sender:sender];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    id destination = segue.destinationViewController;
+    SEL selector = @selector(setCheckin:);
+    if([destination respondsToSelector:selector]){
+        [destination performSelector:selector withObject:self.checkin];
+    }
+    self.sharePopover = [(UIStoryboardPopoverSegue *)segue popoverController];
+}
+
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
