@@ -7,57 +7,197 @@
 //
 
 
-// Import the interfaces
-#import "HelloWorldLayer.h"
 
-// HelloWorldLayer implementation
-@implementation HelloWorldLayer
+#import "GameLayer.h"
+#import "CCTouchDispatcher.h"
 
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
+#define kXWingMarginLeft 40
+#define kXWingUpSpeed 300
+#define kXWingDownSpeed 200
+#define kPlasmaTag 1
+#define kPlasmaInteral 2
+
+#define kAnimationMinDuration 2.0
+#define kAnimationMaxDuration 4.0
+
+#define ARC4RANDOM_MAX      0x100000000
+
+@implementation GameLayer
+
++ (CCScene *)scene {
 	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	HelloWorldLayer *layer = [HelloWorldLayer node];
-	
-	// add layer as a child to scene
+    
+	GameLayer *layer = [GameLayer node];
 	[scene addChild: layer];
 	
-	// return the scene
 	return scene;
 }
 
-// on "init" you need to initialize your instance
--(id) init
-{
-	// always call "super" init
-	// Apple recommends to re-assign "self" with the "super" return value
-	if( (self=[super init])) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+#pragma mark - randoms
++ (int)randomIntBetweenMin:(int)min andMax:(int)max {
+     return (arc4random() % (max-min + 1)) + min ;
+}
 
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
++ (float)randomFloatBetweenMin:(float)min andMax:(float)max {
+    return floorf(((double)arc4random() / ARC4RANDOM_MAX) * (max - min)) + min;    
+}
+
+#pragma mark - Xwing
+
+- (void)addXWing {
+    xwing = [CCSprite spriteWithFile:@"xwing.png" rect:CGRectMake(0, 0, 50, 33)];
+    
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    xwing.position = ccp(0 + kXWingMarginLeft, winSize.height /2);
+    
+    [self addChild:xwing];
+}
+
+- (void)moveXWingY:(long)yDistance {
+    xwing.position = ccp(xwing.position.x, xwing.position.y + yDistance);
+}
+
+- (void)limitXWingPositionInScreen {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];    
+    
+    CGFloat midHeight = xwing.contentSize.width / 2;
+    CGFloat top = xwing.position.y + midHeight;
+    CGFloat bottom = xwing.position.y - midHeight; 
+    
+    if(top >= winSize.height){
+        xwing.position = ccp(xwing.position.x, winSize.height - midHeight);
+    }else if(bottom < 0){
+        xwing.position = ccp(xwing.position.x, 0 + midHeight);
+    }
+}
+
+#pragma mark - plasma and tie
+
+-(void)spriteMoveFinished:(id)sender {
+    CCSprite *sprite = (CCSprite *)sender;
+
+    if(sprite.tag == kPlasmaTag){
+        [plasmas removeObject:sprite];        
+    }
+    [self removeChild:sprite cleanup:YES];
+}
+
+- (void)randomMove:(CCSprite*)sprite {        
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    
+    int minY = sprite.contentSize.height/2;
+    int maxY = winSize.height - sprite.contentSize.height/2;
+    int actualY = [GameLayer randomIntBetweenMin:minY andMax:maxY];
+        
+    sprite.position = ccp(winSize.width + (sprite.contentSize.width/2), actualY);
+    [self addChild: sprite];
+     
+    ccTime duration = [GameLayer randomFloatBetweenMin:kAnimationMinDuration andMax:kAnimationMaxDuration];
+    
+    id actionMove = [CCMoveTo actionWithDuration:duration 
+                                        position:ccp(-sprite.contentSize.width/2, actualY)];
+    id actionMoveDone = [CCCallFuncN actionWithTarget:self 
+                                             selector:@selector(spriteMoveFinished:)];
+    [sprite runAction:[CCSequence actions:actionMove, actionMoveDone, nil]];
+}
+
+- (void)addPlasma {
+    CCSprite *plasma = [CCSprite spriteWithFile:@"plasma.png" rect:CGRectMake(0, 0, 30, 30)];
+    plasma.tag = kPlasmaTag;
+    
+    [self randomMove:plasma];
+    [plasmas addObject:plasma];    
+}
+
+
+#pragma mark - collisions
+
+- (CGRect)rectFromSprite:(CCSprite *)sprite {
+    return CGRectMake(
+                      sprite.position.x - (sprite.contentSize.width/2), 
+                      sprite.position.y - (sprite.contentSize.height/2), 
+                      sprite.contentSize.width, 
+                      sprite.contentSize.height);
+}
+
+- (NSArray *)detectXWingCollisions:(NSArray*)sprites {
+    NSMutableArray *collisions= [[NSMutableArray alloc] init];
+    CGRect shipRect = [self rectFromSprite:xwing];
+    for(CCSprite *sprite in sprites){
+        CGRect spriteRect = [self rectFromSprite:sprite];
+        
+        if(CGRectIntersectsRect(shipRect, spriteRect)){
+            [collisions addObject:sprite];
+        }
+    }
+    return collisions;
+}
+
+- (BOOL)detectCollions {
+    BOOL collisions = NO;
+    NSArray *plasmasCollisions = [self detectXWingCollisions:plasmas];
+    
+    if(plasmasCollisions.count > 0){
+        collisions = YES;
+    }
+    
+    for(CCSprite *plasma in plasmasCollisions){
+        [self spriteMoveFinished:plasma];
+    }
+    
+    [plasmasCollisions release];    
+    return collisions;
+}
+
+#pragma mark - main loop
+
+- (void)nextFrame:(ccTime)dt {
+    if(isTouching){
+        [self moveXWingY:kXWingUpSpeed * dt];
+    }else{
+        [self moveXWingY:-kXWingDownSpeed * dt];
+    }
+    [self limitXWingPositionInScreen];
+    [self detectCollions];
+}
+
+- (id)init {
+    self = [super init];    
+	if(self) {
+        isTouching = NO;
+        self.isTouchEnabled = YES;
+        
+        plasmas = [[NSMutableArray alloc] init];
+        
+        [self addXWing];
+        
+        [self schedule:@selector(nextFrame:)];
+        [self schedule:@selector(addPlasma) interval:kPlasmaInteral];
 	}
 	return self;
 }
 
-// on "dealloc" you need to release all your retained objects
-- (void) dealloc
-{
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
+#pragma mark - touches
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    isTouching = YES;
+    return YES;
+}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event { 
+    isTouching = NO;
+}
+
+- (void)registerWithTouchDispatcher {
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+#pragma mark - dealloc
+
+- (void)dealloc {
+    [plasmas release];
+    
 	[super dealloc];
 }
+
 @end
