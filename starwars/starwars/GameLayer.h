@@ -15,6 +15,12 @@
     BOOL isTouching;
     
     NSMutableArray *plasmas;
+    NSMutableArray *ties;
+    
+    long lives;
+    long score;
+    
+    CCLabelTTF *scoreBoardLabel;
 }
 
 +(CCScene *) scene;

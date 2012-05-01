@@ -14,11 +14,17 @@
 #define kXWingMarginLeft 40
 #define kXWingUpSpeed 300
 #define kXWingDownSpeed 200
+
 #define kPlasmaTag 1
-#define kPlasmaInteral 2
+#define kPlasmaInterval 2
+
+#define kTieTag 2
+#define kTieInterval 1
 
 #define kAnimationMinDuration 2.0
 #define kAnimationMaxDuration 4.0
+
+#define kInitialLives 3
 
 #define ARC4RANDOM_MAX      0x100000000
 
@@ -78,6 +84,8 @@
 
     if(sprite.tag == kPlasmaTag){
         [plasmas removeObject:sprite];        
+    }else if(sprite.tag == kTieTag){
+        [ties removeObject:sprite];        
     }
     [self removeChild:sprite cleanup:YES];
 }
@@ -109,6 +117,13 @@
     [plasmas addObject:plasma];    
 }
 
+- (void)addTie {
+    CCSprite *tie = [CCSprite spriteWithFile:@"tieFighter.png" rect:CGRectMake(0, 0, 30, 30)];
+    tie.tag = kTieTag;
+    
+    [self randomMove:tie];
+    [ties addObject:tie];       
+}
 
 #pragma mark - collisions
 
@@ -136,17 +151,52 @@
 - (BOOL)detectCollions {
     BOOL collisions = NO;
     NSArray *plasmasCollisions = [self detectXWingCollisions:plasmas];
+    NSArray *tiesCollisions = [self detectXWingCollisions:ties];
     
     if(plasmasCollisions.count > 0){
         collisions = YES;
+        score = score + 1;
+    }
+    
+    if(tiesCollisions.count > 0){
+        collisions = YES;
+        lives = lives - 1;
     }
     
     for(CCSprite *plasma in plasmasCollisions){
         [self spriteMoveFinished:plasma];
     }
+
+    for(CCSprite *tie in tiesCollisions){
+        [self spriteMoveFinished:tie];
+    }
     
-    [plasmasCollisions release];    
+    [plasmasCollisions release];
+    [tiesCollisions release];
     return collisions;
+}
+
+#pragma mark - scoreboard
+- (NSString *)scoreBoardString {
+    return [NSString stringWithFormat:@"lives : %ld, score:%ld", lives, score];
+}
+
+- (void)initScoreBoard {
+    lives = kInitialLives;
+    score = 0;    
+    
+    scoreBoardLabel = [CCLabelTTF labelWithString:[self scoreBoardString]
+                                         fontName:@"Starjhol.ttf" 
+                                         fontSize:15];
+    CGSize size = [[CCDirector sharedDirector] winSize];    
+    scoreBoardLabel.anchorPoint = ccp(1,1);
+    scoreBoardLabel.position =  ccp(size.width, size.height);
+    [scoreBoardLabel setColor:ccYELLOW];
+    [self addChild:scoreBoardLabel];
+}
+
+- (void)updateScoreBoard {
+    [scoreBoardLabel setString:[self scoreBoardString]];    
 }
 
 #pragma mark - main loop
@@ -157,22 +207,31 @@
     }else{
         [self moveXWingY:-kXWingDownSpeed * dt];
     }
+    
     [self limitXWingPositionInScreen];
-    [self detectCollions];
+    
+    BOOL hasCollisions = [self detectCollions];
+    if(hasCollisions){
+        [self updateScoreBoard];
+    }
 }
 
 - (id)init {
     self = [super init];    
 	if(self) {
+        [self initScoreBoard];
+        
         isTouching = NO;
         self.isTouchEnabled = YES;
         
         plasmas = [[NSMutableArray alloc] init];
+        ties = [[NSMutableArray alloc] init];
         
         [self addXWing];
         
         [self schedule:@selector(nextFrame:)];
-        [self schedule:@selector(addPlasma) interval:kPlasmaInteral];
+        [self schedule:@selector(addPlasma) interval:kPlasmaInterval];
+        [self schedule:@selector(addTie) interval:kTieInterval];
 	}
 	return self;
 }
@@ -196,6 +255,7 @@
 
 - (void)dealloc {
     [plasmas release];
+    [ties release];
     
 	[super dealloc];
 }
