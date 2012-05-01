@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "GameLayer.h"
 #import "RootViewController.h"
+#import "SimpleAudioEngine.h"
 
 @implementation AppDelegate
 
@@ -111,6 +112,7 @@
 	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [GameLayer scene]];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"imperial.mp3" loop:YES];
 }
 
 
