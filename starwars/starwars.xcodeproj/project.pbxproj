@@ -128,6 +128,7 @@
 		7429645915502ED90066A934 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7429645415502EB00066A934 /* Starjhol.ttf */; };
 		7429645A15502ED90066A934 /* tieFighter.png in Resources */ = {isa = PBXBuildFile; fileRef = 7429645515502EB00066A934 /* tieFighter.png */; };
 		7429645B15502ED90066A934 /* xwing.png in Resources */ = {isa = PBXBuildFile; fileRef = 7429645615502EB00066A934 /* xwing.png */; };
+		7429645E15504C950066A934 /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7429645D15504BF90066A934 /* GameOverLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -373,6 +374,8 @@
 		7429645415502EB00066A934 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
 		7429645515502EB00066A934 /* tieFighter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tieFighter.png; sourceTree = "<group>"; };
 		7429645615502EB00066A934 /* xwing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xwing.png; sourceTree = "<group>"; };
+		7429645C15504BF90066A934 /* GameOverLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
+		7429645D15504BF90066A934 /* GameOverLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +438,8 @@
 				74296443154FFDF80066A934 /* RootViewController.m */,
 				74296445154FFDF80066A934 /* GameLayer.h */,
 				74296446154FFDF80066A934 /* GameLayer.m */,
+				7429645C15504BF90066A934 /* GameOverLayer.h */,
+				7429645D15504BF90066A934 /* GameOverLayer.m */,
 				74296448154FFDF80066A934 /* GameConfig.h */,
 				742962EB154FFDF50066A934 /* Resources */,
 				742962FF154FFDF50066A934 /* libs */,
@@ -852,6 +857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7429645E15504C950066A934 /* GameOverLayer.m in Sources */,
 				74296303154FFDF50066A934 /* CCAction.m in Sources */,
 				74296306154FFDF50066A934 /* CCActionCamera.m in Sources */,
 				74296309154FFDF50066A934 /* CCActionEase.m in Sources */,

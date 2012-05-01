@@ -10,6 +10,7 @@
 
 #import "GameLayer.h"
 #import "CCTouchDispatcher.h"
+#import "GameOverLayer.h"
 
 #define kXWingMarginLeft 40
 #define kXWingUpSpeed 300
@@ -197,6 +198,10 @@
 
 - (void)updateScoreBoard {
     [scoreBoardLabel setString:[self scoreBoardString]];    
+    
+    if(lives == 0){
+        [[CCDirector sharedDirector] replaceScene:[GameOverLayer scene]];
+    }
 }
 
 #pragma mark - main loop
