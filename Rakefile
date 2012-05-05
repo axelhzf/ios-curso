@@ -29,9 +29,16 @@ task :less do
   end
 end
 
-desc 'Build and start server with --auto'
+desc 'Build'
 task :build => [:less] do
   sh 'jekyll'
 end
+
+
+desc ''
+task :server do
+  sh 'jekyll --server --auto'
+end
+
 
 task :default => :build

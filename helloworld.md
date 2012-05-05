@@ -3,48 +3,51 @@ layout: default
 title : Hello world
 ---
 
-# Hello world (Introducción a Xcode)
+# Hello world
 
-Para aprender a utilizar Xcode (el IDE de desarrollo de ObjectiveC) seguiremos los pasos de la creación de un proyecto desde 0 hasta poder ejecutarlo en el simulador. 
+En esta sección aprenderemos como crear un proyecto básico y será nuestra primera toma de contacto con Xcode (el IDE de desarrollo de Objective-C). Aprenderemos la estructura de un proyecto, a utilizar el editor de interfaces gráficas y cómo ejecutar aplicaciones en el simulador.
 
 ## Instalación
 
-Lo primero que debemos hacer es descargar el SDK para iOS. En los ordenadores del curso ya está descargado e instalado para ir adelantando tiempo, pero pongo los enlaces por si quieres instalarlo en tu equipo personal.
-
+Lo primero que debemos hacer es descargar el SDK para iOS. En los ordenadores del curso ya está descargado e instalado para adelantar tiempo.
 
 Para descargar el SDK tenemos que ir iOS Dev Center (hace falta tener un Apple ID, pero es un registro gratuito).
 
 [https://developer.apple.com/devcenter/ios/index.action]()
 
-En esta página encontrareoms enlaces a la documentación, a ejemplos y a diversos recursos que son muy útiles para el desarrollo de aplicaciones. También encontraremos un enlace a la página de descargar de Xcode 4 que nos redirigirá a la App Store donde nos podremos descargar la última versión de Xcode completamente gratis. El único requesito que tenemos es tener OS X Lion instalado en nuestro equipo.
+En esta página se encuentran enlaces a la documentación, a códigos de ejemplo y a diversos recursos que son muy útiles para el desarrollo de aplicaciones. También hay un enlace a la página de descarga de Xcode 4 que redirige a la App Store donde se puede descargar la última versión de Xcode completamente gratis. El único requesito es tener OS X Lion instalado en el equipo.
 
-Para hacer el tutorial se utilizó la versión 4.3, la última versión actualmente.
+Para hacer el tutorial se utilizó la versión 4.3 de Xcode (la última versión hasta el momento de preparar el material).
 
-Este paquete incluye el IDE Xcode, Instruments (herramienta para depurar y perfilar aplicaciones) y el SDK para desarrollar aplicaciones para Mac OS X y para iOS.
+El paquete de instalación incluye Xcode, Instruments (herramienta para depurar y hacer profiles de aplicaciones) y el SDK de desarrollo de aplicaciones para Mac OS X y para iOS.
 
-La versión gratuita incluye un simulador donde podremos ejecutar nuestras aplicaciones de iPhone o iPad. El simulador no soporta componentes que dependen de hardware como el acelerómetro o la cámara. Con la versión gratuita no podemos probar nuestras aplicaciones en un iPhone real ni distribuir nuestras aplicaciones en la App Store. Para ello debemos registrarnos como desarrolladores y los precios son:
+La versión gratuita incluye un simulador donde podremos ejecutar aplicaciones de iPhone y iPad. El simulador no soporta componentes que dependen de hardware como el acelerómetro o la cámara. Con la versión gratuita no se puede probar aplicaciones en un dispositivo físico ni distribuir las aplicaciones en la App Store. Para ello es necesario tener una cuenta de desarrollador. Los precios de estas cuentas son:
 
 - Standard program $99/año [https://developer.apple.com/programs/ios/](https://developer.apple.com/programs/ios/)
 - Enterprise prpogram $299/año [https://developer.apple.com/programs/ios/enterprise/](https://developer.apple.com/programs/ios/enterprise/)
 
+
+## Simulador
+
+Una de las principales diferencia entre el SDK de iOS y el de Android es que el de iOS cuenta con un simulador del dispositivo mientras que Android cuenta con un emulador. La principal diferencia es que un emulador imita tanto el software como el hardware mientras que el simulador de iOS se limita a imitar el software. La primera impresión es que la aproximación de Android es la adecuada porque tenemos un entorno de pruebas más similar al real. Pero en la práctica es una muy mala idea. El emulador es extremadamente lento, consume muchos recursos y hace el proceso de desarrollo más lento. 
+
 ## Creación del proyecto
 
-Abrimos el Xcode y pulsamos en `File/New Project`.
+Abre el Xcode y pulsa `File/New Project`.
 
-Se mostrará una ventana donde tendremos una serie de plantillas de proyectos. Vamos a seleccionar la plantilla más simple de todas, la `Single View Application` y rellenamos con los datos
+Se mostrará una ventana con una serie de plantillas de proyectos. Selecciona la plantilla más simple de todas, la `Single View Application` y rellena los datos
 
-- Product Name: HelloWorld
-- Company Identifier : com.axelhzf
-- Class Prefix : HZF
-- Device Family: Iphone
-- Marca Automatic Reference Count
+- Product Name: `HelloWorld`
+- Company Identifier : `com.axelhzf`
+- Class Prefix : `HZF`
+- Device Family: `iPhone`
+- Marca `Automatic Reference Count`
 
+Objective-C no tiene el concepto de paquetes como Java. Para evitar posibles conflictos en los nombres de las clases al utilizar librerías de terceros se utilizan prefijos en los nombres de los ficheros. El prefijo que suelo utilizar para mis clases es HZF. Apple se reserva el uso de todos los prefijos de 2 letras, como por ejemplo `NS` (NSString) o `UI` (UIButton).
 
-Objective C no tiene el conceptos de paquetes, por lo tanto se utilizan prefijos para evitar conflictos en los nombres. Apple se reserva el uso de todos los prefijos de 2 letras, como por ejemplo NSString o NSArray.
+## Estructura del proyecto
 
-## Estructura del proyecto creado
-
-* Hello World : Proyecto
+* `Hello World` : Proyecto
    * `HZFAppDelegate.h` : Interfaz del AppDelegate
    * `HZFAppDelegate.m` : Implementación del AppDelegate
    * `HZFViewController.h` : Interfaz del Controlador
@@ -55,8 +58,8 @@ Objective C no tiene el conceptos de paquetes, por lo tanto se utilizan prefijos
 	   * `InfoPlist.strings` - Properties localizables
 	   * `main.m` - método main() . Normalmente no tendrás que cambiar esto
 	   * `HelloWorld-Prefix.pch` - lista de .h from external frameworks pch (precompiled header).
-* Frameworks : Librerías
-* Products : Resultado de las compilación
+* `Frameworks` : Librerías
+* `Products` : Resultado de las compilación
 
 ## Interfaz gráfica de Xcode
 
@@ -91,7 +94,7 @@ JumpBar:
 
 ## Atajos de teclado
 
-Para ver los atajos de teclado y para cambiarlos ir a Preferences (Cmd + ,), Key Bindings
+Para ver los atajos de teclado y para cambiarlos ir a Preferences (Cmd + ,) / Key Bindings
 
 - Cmd + B : Compila la aplicación
 - Cmd + N : New File
@@ -102,29 +105,27 @@ Para ver los atajos de teclado y para cambiarlos ir a Preferences (Cmd + ,), Key
 - Cmd + R : Compilar y ejecuta la aplicación
 - Ctrl + Cmd + Up : Cambiar entre .h y .m
 
-## Interfaces de usuario
+## Interfaz de usuario
 
-Las interfaces se puede codificar a mano, pero es mucho más simple utilizar el editor de interfaces de usuario Interface Builder. Interface Builder a partir de la interfaz gráfica, crea objetos de Objective-C como si escribieras el código a mano y serializa esos objetos en los ficheros xib para que puedan ser cargados directamente en memoria.
+La interfaz de usuario de la aplicación podemos codificarla a mano o podemos utilizar el Interface Builder para hacerlo de forma gráfica. A partir de la interfaz gráfica, Interface Builder crea objetos de Objective-C igual que si se escribiera el código a mano y serializa esos objetos en los ficheros xib para que puedan ser cargados directamente en memoria.
 
-Abre el fichero `HZFHelloWorld.xib` que contiene la interfaz de usuario y se abrirá el editor de interfaces. Antes era una aplicación separada que se llamaba Interface Builder, pero a partir de Xcode 4 se integra dentro del propio Xcode.
+Abre el fichero `HZFHelloWorld.xib` que contiene la interfaz de usuario y se abrirá el Interface Builder. En versiones anterior de Xcode era una aplicación separada que se llamaba Interface Builder, pero a partir de Xcode 4 viene integrado.
 
-> Las extensiones de los ficheros son *.xib (moderno) y *.nib (antiguo). Pero se ha quedado como costumbre llamar los ficheros nib files. En muchos sitios de la documentación de la propia apple se nombran nib files.
+> Las extensiones de los ficheros son \*.xib (moderno) y \*.nib (antiguo). Se ha quedado como costumbre llamar los ficheros nib files. En muchos sitios de la documentación de la propia Apple se nombran como nib files.
 
-En este editor, la barra de la izquierda contiene la jerarquia de los elementos que están en la vista.
+En este editor, la barra de la izquierda contiene la jerarquia de los elementos que están en la vista:
 
-- File's Owners : Representa el objeto que cargo el fichero nib
+- File's Owners : Representa el objeto que cargó el fichero nib
 - First Responder : Es el elemento con el que el usuario está interactuando. Por ejemplo si el usuario esta introduciendo texto, el first responder será el campo de texto. El first responder va cambiando a medida que el usuario interactura con la aplicación. 
-- El terecer icono `View` representa un objeto de la clase `UIView`. Los elementos como botones y campos de texto que añadamos , serán hijos de esta vista.
+- El terecer icono `View` representa un objeto de la clase `UIView`. Los elementos como botones y campos de texto que añadamos, serán hijos de esta vista.
 
-Para acceder a la Librería de elementos gráficos que podemos utilizar dentro de la interfaz vamos a `View/Utilities/Show Utilities`. Con esto se nos marcará la 3º pestaña del panel derecho inferior.
+Para acceder a la Librería de elementos gráficos que podemos utilizar dentro de la interfaz vamos a `View/Utilities/Show Utilities`. Con esto se marcará la 3º pestaña del panel derecho inferior.
 
+Selecciona una etiqueta (UILabel) y arrastrala dentro de la view. Es importante que en la vista jerarquica aparezca como hija de la View principal. Para modificar el texto de la etiqueta haz doble clic.
 
-Busca una label (UILabel) y arrastrala dentro de la view. Es importante que en la vista jerarquica aparezca como hija de la View principal. Doble click y le ponemos el texto 'Hello World'
+Para ejecutar la aplicación en el simulador puedes utilizar el atajo de teclado `CMD + R`.
 
-Luego pulsamos Cmd + R y veremos nuestra aplicación ejecutandose en el simulador.
-
-En el inspector podemos cambiar las propiedades de los elementos. Por ejemplo, vamos a probar a cambiar el color de fondo de la vista y color del texto de la etiqueta.
-
+Para personalizar las propiedades de los elementos utiliza la pestaña Inspector. Por ejemplo prueba a cambiar el color de fondo de la vista y color del texto de la etiqueta.
 
 ![Hello World](assets/img/helloWorld.png)
 
