@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74F44A0E155547E300429871 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A0D155547E300429871 /* UIKit.framework */; };
+		74F44A10155547E300429871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A0F155547E300429871 /* Foundation.framework */; };
+		74F44A12155547E300429871 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A11155547E300429871 /* CoreGraphics.framework */; };
+		74F44A18155547E300429871 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74F44A16155547E300429871 /* InfoPlist.strings */; };
+		74F44A1A155547E300429871 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A19155547E300429871 /* main.m */; };
+		74F44A1E155547E300429871 /* HZFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A1D155547E300429871 /* HZFAppDelegate.m */; };
+		74F44A21155547E300429871 /* HZFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A20155547E300429871 /* HZFViewController.m */; };
+		74F44A24155547E300429871 /* HZFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F44A22155547E300429871 /* HZFViewController.xib */; };
+		74F44A2C155547E400429871 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A2B155547E400429871 /* SenTestingKit.framework */; };
+		74F44A2D155547E400429871 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A0D155547E300429871 /* UIKit.framework */; };
+		74F44A2E155547E400429871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F44A0F155547E300429871 /* Foundation.framework */; };
+		74F44A36155547E400429871 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74F44A34155547E400429871 /* InfoPlist.strings */; };
+		74F44A39155547E400429871 /* objintroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A38155547E400429871 /* objintroTests.m */; };
+		74F44A4415557F9200429871 /* HZFPersona.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A4315557F9200429871 /* HZFPersona.m */; };
+		74F44A47155585F400429871 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F44A46155585F400429871 /* NSString+Utilities.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74F44A2F155547E400429871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74F44A00155547E300429871 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74F44A08155547E300429871;
+			remoteInfo = objintro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74F44A09155547E300429871 /* objintro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objintro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F44A0D155547E300429871 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74F44A0F155547E300429871 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74F44A11155547E300429871 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74F44A15155547E300429871 /* objintro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "objintro-Info.plist"; sourceTree = "<group>"; };
+		74F44A17155547E300429871 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74F44A19155547E300429871 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74F44A1B155547E300429871 /* objintro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objintro-Prefix.pch"; sourceTree = "<group>"; };
+		74F44A1C155547E300429871 /* HZFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZFAppDelegate.h; sourceTree = "<group>"; };
+		74F44A1D155547E300429871 /* HZFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZFAppDelegate.m; sourceTree = "<group>"; };
+		74F44A1F155547E300429871 /* HZFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZFViewController.h; sourceTree = "<group>"; };
+		74F44A20155547E300429871 /* HZFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZFViewController.m; sourceTree = "<group>"; };
+		74F44A23155547E300429871 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HZFViewController.xib; sourceTree = "<group>"; };
+		74F44A2A155547E400429871 /* objintroTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objintroTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F44A2B155547E400429871 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74F44A33155547E400429871 /* objintroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "objintroTests-Info.plist"; sourceTree = "<group>"; };
+		74F44A35155547E400429871 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74F44A37155547E400429871 /* objintroTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objintroTests.h; sourceTree = "<group>"; };
+		74F44A38155547E400429871 /* objintroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objintroTests.m; sourceTree = "<group>"; };
+		74F44A4215557F9200429871 /* HZFPersona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZFPersona.h; sourceTree = "<group>"; };
+		74F44A4315557F9200429871 /* HZFPersona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZFPersona.m; sourceTree = "<group>"; };
+		74F44A45155585F400429871 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
+		74F44A46155585F400429871 /* NSString+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74F44A06155547E300429871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A0E155547E300429871 /* UIKit.framework in Frameworks */,
+				74F44A10155547E300429871 /* Foundation.framework in Frameworks */,
+				74F44A12155547E300429871 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F44A26155547E400429871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A2C155547E400429871 /* SenTestingKit.framework in Frameworks */,
+				74F44A2D155547E400429871 /* UIKit.framework in Frameworks */,
+				74F44A2E155547E400429871 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74F449FE155547E300429871 = {
+			isa = PBXGroup;
+			children = (
+				74F44A13155547E300429871 /* objintro */,
+				74F44A31155547E400429871 /* objintroTests */,
+				74F44A0C155547E300429871 /* Frameworks */,
+				74F44A0A155547E300429871 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74F44A0A155547E300429871 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A09155547E300429871 /* objintro.app */,
+				74F44A2A155547E400429871 /* objintroTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74F44A0C155547E300429871 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A0D155547E300429871 /* UIKit.framework */,
+				74F44A0F155547E300429871 /* Foundation.framework */,
+				74F44A11155547E300429871 /* CoreGraphics.framework */,
+				74F44A2B155547E400429871 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74F44A13155547E300429871 /* objintro */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A1C155547E300429871 /* HZFAppDelegate.h */,
+				74F44A1D155547E300429871 /* HZFAppDelegate.m */,
+				74F44A1F155547E300429871 /* HZFViewController.h */,
+				74F44A20155547E300429871 /* HZFViewController.m */,
+				74F44A22155547E300429871 /* HZFViewController.xib */,
+				74F44A14155547E300429871 /* Supporting Files */,
+				74F44A4215557F9200429871 /* HZFPersona.h */,
+				74F44A4315557F9200429871 /* HZFPersona.m */,
+				74F44A45155585F400429871 /* NSString+Utilities.h */,
+				74F44A46155585F400429871 /* NSString+Utilities.m */,
+			);
+			path = objintro;
+			sourceTree = "<group>";
+		};
+		74F44A14155547E300429871 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A15155547E300429871 /* objintro-Info.plist */,
+				74F44A16155547E300429871 /* InfoPlist.strings */,
+				74F44A19155547E300429871 /* main.m */,
+				74F44A1B155547E300429871 /* objintro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74F44A31155547E400429871 /* objintroTests */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A37155547E400429871 /* objintroTests.h */,
+				74F44A38155547E400429871 /* objintroTests.m */,
+				74F44A32155547E400429871 /* Supporting Files */,
+			);
+			path = objintroTests;
+			sourceTree = "<group>";
+		};
+		74F44A32155547E400429871 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F44A33155547E400429871 /* objintroTests-Info.plist */,
+				74F44A34155547E400429871 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74F44A08155547E300429871 /* objintro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74F44A3C155547E400429871 /* Build configuration list for PBXNativeTarget "objintro" */;
+			buildPhases = (
+				74F44A05155547E300429871 /* Sources */,
+				74F44A06155547E300429871 /* Frameworks */,
+				74F44A07155547E300429871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = objintro;
+			productName = objintro;
+			productReference = 74F44A09155547E300429871 /* objintro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74F44A29155547E400429871 /* objintroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74F44A3F155547E400429871 /* Build configuration list for PBXNativeTarget "objintroTests" */;
+			buildPhases = (
+				74F44A25155547E400429871 /* Sources */,
+				74F44A26155547E400429871 /* Frameworks */,
+				74F44A27155547E400429871 /* Resources */,
+				74F44A28155547E400429871 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74F44A30155547E400429871 /* PBXTargetDependency */,
+			);
+			name = objintroTests;
+			productName = objintroTests;
+			productReference = 74F44A2A155547E400429871 /* objintroTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74F44A00155547E300429871 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HZF;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 74F44A03155547E300429871 /* Build configuration list for PBXProject "objintro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74F449FE155547E300429871;
+			productRefGroup = 74F44A0A155547E300429871 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74F44A08155547E300429871 /* objintro */,
+				74F44A29155547E400429871 /* objintroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74F44A07155547E300429871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A18155547E300429871 /* InfoPlist.strings in Resources */,
+				74F44A24155547E300429871 /* HZFViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F44A27155547E400429871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A36155547E400429871 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74F44A28155547E400429871 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74F44A05155547E300429871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A1A155547E300429871 /* main.m in Sources */,
+				74F44A1E155547E300429871 /* HZFAppDelegate.m in Sources */,
+				74F44A21155547E300429871 /* HZFViewController.m in Sources */,
+				74F44A4415557F9200429871 /* HZFPersona.m in Sources */,
+				74F44A47155585F400429871 /* NSString+Utilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F44A25155547E400429871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F44A39155547E400429871 /* objintroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74F44A30155547E400429871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74F44A08155547E300429871 /* objintro */;
+			targetProxy = 74F44A2F155547E400429871 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74F44A16155547E300429871 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F44A17155547E300429871 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74F44A22155547E300429871 /* HZFViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F44A23155547E300429871 /* en */,
+			);
+			name = HZFViewController.xib;
+			sourceTree = "<group>";
+		};
+		74F44A34155547E400429871 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F44A35155547E400429871 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74F44A3A155547E400429871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		74F44A3B155547E400429871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74F44A3D155547E400429871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objintro/objintro-Prefix.pch";
+				INFOPLIST_FILE = "objintro/objintro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74F44A3E155547E400429871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objintro/objintro-Prefix.pch";
+				INFOPLIST_FILE = "objintro/objintro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74F44A40155547E400429871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/objintro.app/objintro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objintro/objintro-Prefix.pch";
+				INFOPLIST_FILE = "objintroTests/objintroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74F44A41155547E400429871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/objintro.app/objintro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objintro/objintro-Prefix.pch";
+				INFOPLIST_FILE = "objintroTests/objintroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74F44A03155547E300429871 /* Build configuration list for PBXProject "objintro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F44A3A155547E400429871 /* Debug */,
+				74F44A3B155547E400429871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74F44A3C155547E400429871 /* Build configuration list for PBXNativeTarget "objintro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F44A3D155547E400429871 /* Debug */,
+				74F44A3E155547E400429871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74F44A3F155547E400429871 /* Build configuration list for PBXNativeTarget "objintroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F44A40155547E400429871 /* Debug */,
+				74F44A41155547E400429871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74F44A00155547E300429871 /* Project object */;
+}
