@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign solucion = false %}
+
 # Nuevos checkins
 
 Vamos a añadir la vista que nos va a permitir añadir nuevos checkins. También va a ser una tabla, pero en este caso, las celdas de la tabla se podrán editar para insertar los datos.
@@ -225,6 +227,8 @@ Nos queda pendiente ver cómo vamos a obtener la geolocalización del usuario. L
 
         [self.navigationController popViewControllerAnimated:YES];
 
+{% if solucion %}
+
 # Solucion
 
 En este caso vamos a hacer el ejercicio de una forma diferente a la propuesta. En vez de conectar las dos vistas mediante el Segue que las une, vamos a hacer que la lista de checkins sea un Singleton, de manera que podamos a acceder a él desde la dos vistas. No es la forma más correcta de hacerlo, pero así vemos como se declara un Singleton.
@@ -263,3 +267,5 @@ No basta con añadir los métodos al array, debemos indicarle a la tabla que se 
     }
 
 Al poner la llamada en el método `viewWillAppear`, cada vez que la vista vaya a aparecer la vista, recargará los datos porque es posible que el array de checkins haya cambiado.
+
+{% endif %}

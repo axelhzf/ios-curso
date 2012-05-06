@@ -3,6 +3,8 @@ layout: default
 title : Map
 ---
 
+{% assign solucion = false %}
+
 # Mapa
 
 Vamos a crear una nueva vista de mapa, para mostrar la posición de un checkin.El funcionamiento será que cuando un usuario seleccione un checkin de la lista se mostrará el mapa con su posición.
@@ -101,6 +103,8 @@ En este caso en concreto no se está personalizando la anotación que le indica 
 - Para cambiar el tipo de mapa busca documentación de la clase `MKMapView` y el método `mapType:`
 - Para mostrar los diferentes tipos de mapa una buena opción podría ser utilizar `UIActionSheet`. Busca documentación de cómo se usa.
 
+{% if solucion %}
+
 # Solución
 
 Lo primero que vamos a hacer es comunicar la vista principal con la vista de la tabla. Para ello debemos asignarle un identificador al Segue y sobrescribir el método prepareForSegue:
@@ -187,3 +191,5 @@ Y la implementación del método debe asignar el tipo de mapa según el botón q
             default:
                 break;
         }
+
+{% endif %}

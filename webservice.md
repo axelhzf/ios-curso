@@ -3,6 +3,9 @@ layout : default
 title : Webservice
 ---
 
+{% assign solucion1 = false %}
+{% assign solucion2 = false %}
+
 ## Persistencia
 
 A la hora de persistir los datos de la aplicación existen varias alternativas:
@@ -126,6 +129,8 @@ Con este método se convierte el JSON en un NSDictionary o un NSArray (dependien
 
 - El formato en el que viene la fecha es ddMMMyyyy HH:mm:ss
 
+{% if solucion1 %}
+
 ## Solución
 
 Definición de la cola global
@@ -186,6 +191,8 @@ Por último falta realizar la llamada a recuperar los datos del servidor
         [self fetch];
     }
 
+{% endif %}
+
 ## Creando un nuevo checkin en el servidor
 
 Siguiendo los principios REST, para crear un nuevo checkin se realiza una petición POST. El body de la petición son los datos en formato JSON.
@@ -205,6 +212,8 @@ Para realizar una petición POST de forma síncrona
 ## Ejercicio
 
 - Cuando se cree un nuevo checkin realiza una petición al servidor para que se almacene el nuevo checkin
+
+{% if solucion2 %}
 
 ## Solución
 
@@ -250,3 +259,5 @@ El método que realiza la petición al servidor
 Código:
 
 [https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6](https://github.com/axelhzf/ios-curso/commit/3dccf9074cade2d951ab8619499f7553ff0f3ae6)
+
+{% endif %}

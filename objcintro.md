@@ -2,6 +2,7 @@
 layout : default
 title : Introducción a Objective-C
 ---
+{% assign solucion = false %}
 
 # Introducción a Objective-C
 
@@ -344,6 +345,8 @@ Crea una categoria para `NSString` que compruebe si un string es un email. Has u
         STAssertFalse([invalidEmail isEmail], nil);
     }
 
+    
+{% if solucion %}
 # Solución
 
     -(void)testEj1 {
@@ -484,3 +487,5 @@ Si quieres más información acerca de Objective-C puedes consultar el apartado 
 * [http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
 * [http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html)
 * [http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html](http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/ObjC_classic/_index.html)
+
+{% endif %}

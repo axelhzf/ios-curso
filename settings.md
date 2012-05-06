@@ -2,6 +2,8 @@
 layout : default
 ---
 
+{% assign solucion = false %}
+
 # Preferencias
 
 A la hora de definir las preferencias de la aplicación existen dos opciones: definirlas como un menú propio de la aplicación o integrarlas dentro del panel de preferencias del sistema. En esta sección se verá como hacer la segunda opción.
@@ -37,6 +39,8 @@ En el caso de que quieras escribir en las preferencias desde la aplicación, lo 
 - Define la configuración para el nombre de usuario de la aplicación.
 - Al crear nuevo checkin, asigna el nombre de usuario definido en la configuración.
 
+{% if solucion %}
+
 # Solución
 
 La definición del fichero plist es bastante sencilla, únicamente nos hace falta simplificar la definición que viene por defecto eliminando los items 2 y 3 y asignarle un identificador al textfield.
@@ -55,3 +59,4 @@ Desde la aplicación, en la clase `HZFNewCheckinViewController` :
         ..
     }
 
+{% endif %}

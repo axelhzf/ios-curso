@@ -3,6 +3,10 @@ layout: default
 title: Tables
 ---
 
+{% assign solucion1 = false %}
+{% assign solucion2 = false %}
+{% assign solucion3 = false %}
+
 # Tablas
 
 La vista de tabla (UITableView) es el componente central en muchas aplicaciones. Es un elemento con muchas opciones, es importante que aprendamos a utilizarlas correctamente. En twosquare la vamos a utilizar para mostrar la lista de checkins.
@@ -103,6 +107,7 @@ Declara una celda de tipo `UITableViewCellStyleSubtitle`, pon un subtitulo en la
 - Para mostrar una imagen utiliza `[UIImageView imageNamed:@"apple.png"]`
 - Busca en la documentación los elementos que tiene una `UITableViewCellStyleSubtitle`
 
+{% if solucion1 %}
 ## Solución
 
 Añade la imagen al proyecto y modifica el método `tableView:cellForRowAtIndexPath:`
@@ -119,6 +124,8 @@ Añade la imagen al proyecto y modifica el método `tableView:cellForRowAtIndexP
 El método `UIImage imageNamed:` cachea las imágenes, por lo tanto es seguro utilizarlo de esta forma, porque no se está leyendo la imagen desde fichero para cada unas de las celdas.
 
 Este caso es un ejemplo simple, en aplicaciones reales deberías utilizar imágenes del tamaño del sitio donde las vas a colocar, para que no seas el dispositivo el que tenga que hacer el escalado. También es conveniente, en la medida de lo posible, evitar las transparencias de las imágenes porque pueden ralentizar la aplicación.
+
+{% endif %}
 
 ## Otras personalizaciones de las celdas por defecto
 
@@ -142,6 +149,7 @@ Utiliza el método
 
 De UITableViewDelegate que indica cómo se debe pintar una celda. Este método se llama justo antes de pintar una celda. Aquí no se debería tener en cuenta el contenido de la celda.
 
+{% if solucion2 %}
 ### Solución
 
 Comprobamos si la celda es par o impar utilizando el módulo. Y si es par le fijamos un color de fondo.
@@ -154,6 +162,9 @@ Comprobamos si la celda es par o impar utilizando el módulo. Y si es par le fij
 	}
 
 **¿Ves algún problema a esta implementación?**
+
+{% endif %}
+
 
 # Personalización de la celda
 
@@ -235,18 +246,21 @@ Para ello lo único que tenemos que hacer es crear una nueva clase que extienda 
 	    return cell;
 	}
 
+
+
 # Ejercicio
 
 Prepara la celda para mostrar los checkins:
 * Muestra el nombre, la fecha y el usuario
 * Muestra una imágen según la categoría. Puedes utilizar estos [iconos](resources/icons.zip).
 
-
 Pistas:
 
 * Para formatear las fechas utiliza la clase `NSDateFormatter`.
 
 ![Cells](assets/img/cells.png)
+
+{% if solucion3 %}
 
 # Solución
 
@@ -286,3 +300,5 @@ Pistas:
 	}
 
 [https://github.com/axelhzf/ios-curso/tree/ceb8a958c309deb144758b73a3cead1af9393f40/twosquare](https://github.com/axelhzf/ios-curso/tree/ceb8a958c309deb144758b73a3cead1af9393f40/twosquare)
+
+{% endif %}

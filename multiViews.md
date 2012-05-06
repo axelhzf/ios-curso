@@ -3,6 +3,8 @@ layout: default
 title: MultiViews
 ---
 
+{% assign solucion = false %}
+
 # Varias vistas
 
 Hasta ahora la aplicación de hola mundo con la que hemos estado trabajando tenía una única vista. Lo normal es que las aplicaciones tengan varias vistas conectadas entre sí y que compartan información entre ellas. Por ejemplo, Mail.app, la aplicación para ver el correo que trae por defecto iOS, tiene una vista donde se muestra el listado de emails que tienes en la bandeja de entrada y cuando seleccionas uno, puedes ver en otra  vista el contenido del email.
@@ -203,6 +205,7 @@ Si no pudiste seguir las explicaciones anteriores, puedes descargar el código d
 - Prueba otros tipos de animaciones : `UIViewAnimationTransitionFlipFromLeft`, `UIViewAnimationTransitionFlipFromRight`,  `UIViewAnimationTransitionCurlUp`, `UIViewAnimationTransitionCurlDown`
 - Prueba a variar otras propiedades, por ejemplo el color de fondo de una vista. Añade un botón a la vista azul, que cuando se pulse cambie el tono de color del azul con una transición.
 
+{% if solucion %}
 
 # Solución
 
@@ -276,3 +279,5 @@ Para la parte de cambiar el color de fondo de forma animada. Añade un botón a 
 Puedes ver el código completo en:
 
 [https://github.com/axelhzf/ios-curso/tree/93269042b49728c9f09e88c3e478d695ccb362bd/MultiViews](https://github.com/axelhzf/ios-curso/tree/93269042b49728c9f09e88c3e478d695ccb362bd/MultiViews)
+
+{% endif %}

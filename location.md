@@ -3,6 +3,8 @@ layout : default
 title : Location
 ---
 
+{% assign solucion = false %}
+
 # Localización
 
 En la vista de nuevo checkin queda pendiente guardar la ubicación del usuario. Para obtener la posición del usuario se utiliza una combinación de información de distintas fuentes (GPS, puntos wifis, celdas de teléfono). Para tener acceso a la posición desde el código se utiliza la librería `CoreLocation`.
@@ -46,6 +48,8 @@ Para empezar el rastreo de la posición del usuario
 
         [cell setNeedsLayout];
 
+{% if solucion %}
+
 # Solución
 
         - (void)initLocationManager {
@@ -79,3 +83,5 @@ Para empezar el rastreo de la posición del usuario
         - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
             self.lastLocation = newLocation;
         }
+
+{% endif %}

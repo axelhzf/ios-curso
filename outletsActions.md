@@ -2,6 +2,7 @@
 layout: default
 title : Outlets y Actions
 ---
+{% assign solucion = false %}
 
 # Outlets y Actions
 
@@ -95,6 +96,7 @@ Añade un segundo botón. Conecta los dos botones a la **misma** acción. Escrib
 
 Pista: Utiliza la definición de acción con un parámetro.
 
+{% if solucion %}
 ## Solución
 
 Para poder distinguir entre los dos botones dentro de la misma acción, vamos a declarar un outlet para cada uno de ellos. Los llamaremos boton1 y boton2.
@@ -112,3 +114,5 @@ De manera que desde la acción vamos a poder comparar el sender y saber qué bot
 Puedes descargar la solución del ejercicio desde 
 
 [https://github.com/axelhzf/ios-curso/tree/1d54949128bfc286ed1f3716c84032d72c476ec7/HelloWorld2](https://github.com/axelhzf/ios-curso/tree/1d54949128bfc286ed1f3716c84032d72c476ec7/HelloWorld2)
+
+{% endif %}

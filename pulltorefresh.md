@@ -3,6 +3,8 @@ layout : default
 title : Pull to refresh
 ---
 
+{% assign solucion = false %}
+
 ## Pull to refresh
 
 Pull to refresh es un recurso de interfaz de usuario. Se aplica principalmente en tablas y sirve para actualizar el contenido. El creador de la interfaz es el autor de Tweetie, una cliente de twitter para iOS que posteriormente fue comprado por Twitter.
@@ -71,6 +73,7 @@ Puedes probar las opciones de personalización de la librería
 	tableView.pullToRefreshView.textColor = [UIColor whiteColor];
 	tableView.pullToRefreshView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 
+{% if solucion %}
 
 ## Solución
 
@@ -94,3 +97,5 @@ Por último debemos detener la animación cuando se haya terminado de procesar l
 		[self.tableView reloadData];
 		[self.tableView.pullToRefreshView stopAnimating];
 	}
+
+{% endif %}

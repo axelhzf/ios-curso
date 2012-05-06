@@ -1,6 +1,7 @@
 ---
 layout : default
 ---
+{% assign solucion = false %}
 
 # Cocos2d
 
@@ -358,6 +359,8 @@ Con lo que hemos visto hasta ahora ya somos capaces de tener una primera versió
 * Añade variables con la puntuación (incrementa cuando la nave coge una bola de plasma) y otra variable con las vidas (disminuye cuando se choca con otra nave)
 * Añade etiquetas para mostrar el valor de la puntuación y de las vidas
 
+{%if solucion %}
+
 ## Solución
 
 	@interface GameLayer : CCLayer {
@@ -463,6 +466,7 @@ Con lo que hemos visto hasta ahora ya somos capaces de tener una primera versió
 	    }
 	}
 
+{% endif %}
 
 # Toques finales
 

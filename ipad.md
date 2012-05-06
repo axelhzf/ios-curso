@@ -3,6 +3,8 @@ layout : default
 title : iPad
 ---
 
+{% assign solucion = false %}
+
 # iPad
 
 Todas las aplicaciones creadas para iPhone son compatibles con el iPad. El problema es que no se ajustan a toda la pantalla, se ven con la resolución de un iPhone. Para probar cómo se vería nuestra aplicación de iPhone en un iPad únicamente tienes que cambiar el Scheme (Al lado del botón de Run en la parte superior de XCode) a iPad simulator.
@@ -123,6 +125,7 @@ Asegúrate de conectar todos los outlets correctamente para que la interfaz func
 
 Añade la vista para compartir un checkin en twitter y por email. Una posible opción para hacer esto es poner un botón en la parte derecha de la barra de navegación y que la vista se muestre como un popover.
 
+{% if solucion %}
 
 ## Solución
 
@@ -195,3 +198,5 @@ Por último, al enviar el segue tenemos que guardar la referencia al popover
 	    ...
 	    self.sharePopover = [(UIStoryboardPopoverSegue *)segue popoverController];
 	}
+
+{% endif %}	
