@@ -4,7 +4,7 @@ layout : default
 
 # Cocos2d
 
-Cocos2d es una librería basada en OpenGL ES para crear juegos para iPhone, iPod touch y iPad. En realidad es un port de la librería con el mismo nombre escrita en python. Es una de las librerías más famosas y extendidas por su sencillas. Hay mucha documentación y material en internet.
+Cocos2d es una librería basada en OpenGL ES para crear juegos para iPhone, iPod touch y iPad. En realidad es un port de la librería con el mismo nombre escrita en python. Es una de las librerías más famosas y extendidas por su sencillez. Hay mucha documentación y material en internet.
 
 # Objetivo
 
@@ -20,8 +20,6 @@ Los pasos de instalación son descargar el código fuente e instalar unas planti
     
 
 Esto además de las librerías instalará unas plantillas para la creación de proyectos.
-
-
 
 ## Creación del proyecto
 
@@ -60,7 +58,7 @@ En el sistema de coordenadas que utiliza cocos2d el origen (0,0) está en la esq
 
 # Crea un nuevo layer
 
-Crea un nuevo layer `GameLayer` puedes renombrar `HelloWorldLayer` o puedes crear uno nuevo. Si creas un nuevo layer asegurate de que en la clase `AppDelegate` inicias el nuevo layer.
+Crea un nuevo layer `GameLayer`. Puedes renombrar `HelloWorldLayer` o puedes crear uno nuevo. Si creas un nuevo layer asegúrate de que en la clase `AppDelegate` inicias el nuevo layer.
 
 	[[CCDirector sharedDirector] runWithScene: [GameLayer scene]];
 
@@ -81,7 +79,7 @@ Los Sprites están representados por la clase `CCSprite`. Para iniciar un sprite
 
 Este código crea un sprite de dimensiones 50x50 a partir de una imagen y lo alinea en el centro de la pantalla.
 
-Para el juego nos va a hacer falta naves espaciales, letras y música. Añado un zip con los recursos que utilice. Si prefieres utilizar otros no hay problema.
+Para el juego nos va a hacer falta naves espaciales, letras y música. Añado un zip con los recursos que utilicé. Si prefieres utilizar otros no hay problema.
 
 [Recursos para juego](resources/game.zip)
 

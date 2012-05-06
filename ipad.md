@@ -7,17 +7,20 @@ title : iPad
 
 Todas las aplicaciones creadas para iPhone son compatibles con el iPad. El problema es que no se ajustan a toda la pantalla, se ven con la resolución de un iPhone. Para probar cómo se vería nuestra aplicación de iPhone en un iPad únicamente tienes que cambiar el Scheme (Al lado del botón de Run en la parte superior de XCode) a iPad simulator.
 
-Este no es el efecto que queremos conseguir, queremos hacer nuestra aplicación totalmente compatible con el iPad. Para ello vamos a ir a la configuración del proyecto y vamos a cambiar el Devices a Universal, que quiere decir que nuestra aplicación es compatible tanto con iPhone como con iPad. Si volvemos a ejecutar el simulador del iPad veremos que el resultado que obtenemos ahora es mucho mejor. Tenemos suerte porque nuestro interfaz utiliza elementos estandar, tablas, mapas. Son vistas vistas que están preparadas para funcionar con el iPad. En caso de que hubieramos diseñado vistas propias, quizás hubieramos tenido problema al especificar las dimensiones de las cosas.
+
+Este no es el efecto que queremos conseguir, queremos hacer nuestra aplicación sea totalmente compatible con el iPad. Lo ideal es crear una aplicación Universal. Esto quiere decir que nuestra aplicación funcionará tanto en un iPhone como en un iPad. Esta es la opción correcta cuando quieres que tu aplicación se pueda utilizar en los dos dispositivos. Otra opción es sacar dos versiones distintas de tu aplicación. Es una práctica que suelen llevar a cabo algunos desarrolladores en la App Store y es realmente molesta para los usuarios. Supón que ya has pagado por una aplicación para tu iPhone y tienes que volver a pagar para poder utilizar en el iPad.
+
+Para convertir la aplicación en Universal abre la configuración configuración del proyecto y cambia la opción Devices a Universal. Si volvemos a ejecutar el simulador del iPad veremos que el resultado que obtenemos ahora es mucho mejor. Tenemos suerte porque nuestro interfaz utiliza elementos estándar, tablas, mapas. Son vistas que están preparadas para funcionar con el iPad. En caso de que hubiéramos diseñado vistas propias, quizás hubiéramos tenido problemas al especificar las dimensiones de las cosas.
 
 ## Interfaz específica da iPad
 
-Con el paso anterior tenemos una interfaz compatible con el iPad, que es muy distinto a una interfaz específica para el iPad. El iPad tiene una pantalla mucho mayor que un iPhone y tenemos que aprovecharla. Hay elementos de interfaz de usuario específicos para el iPad como son la SplitViews y los Popovers. Vamos a modificar twosquare para incorporar estos elementos. Para conseguirlo, tendremos 2 storyboars diferentes, uno para la interfaz del iPhone y otro para la interfaz del iPad. Es importante que a medida que vayamos haciendo los cambios para trabajar con el iPad sigamos probando nuestra aplicación en el iPhone, para comprobar que no hemos roto nada y nuestra aplicación sigue funcionando correctamente.
+Ya tenemos una interfaz compatible con el iPad que es muy distinto a una interfaz específica para el iPad. El iPad tiene una pantalla mucho mayor que un iPhone y tenemos que aprovecharla. Hay elementos de interfaz de usuario específicos para el iPad como son las SplitViews y los Popovers. Vamos a modificar twosquare para incorporar estos elementos. Para conseguirlo, tendremos 2 Storyboars distintos, uno para la interfaz del iPhone y otro para la interfaz del iPad. Es importante que a medida que vayamos haciendo los cambios para hacer una interfaz específica para iPad sigamos probando nuestra aplicación en el iPhone, para comprobar que no hemos roto nada y todo sigue funcionando correctamente.
 
-Creamos un storyboard nuevo `File/New/File/Storyboard` y selecciona iPad en device Family. Le pondremos de nombre `twoSquare_iPad`. En la configuración del proyecto, en la sección `iPad Deployment Info` debemos seleccionar como `Main Storyboard` el nuevo storyboard que acabamos de crear.
+Crea un nuevo Storyboard `File/New/File/Storyboard` y selecciona iPad en device Family. Ponle de nombre `twoSquare_iPad`. En la configuración del proyecto, en la sección `iPad Deployment Info` selecciona como `Main Storyboard` el Storyboard que acabas de crear.
 
 ## SplitViewController
 
-En el nuevo StoryBoard añadimos un `SplitViewController`. En nuestro caso la vista máster será el listado de checkins y el detaille será el mapa. Debemos copiar la interfaz que tenemos en nuestro storyboard para iPhone. Copia el prototipo de celda de la lista de checkins. Añade un mapView a la vista de detalle.
+En el nuevo StoryBoard añadimos un `SplitViewController`. En nuestro caso la vista máster será el listado de checkins y el detalle será el mapa. Debemos copiar la interfaz que tenemos en nuestro Storyboard para iPhone. Copia el prototipo de celda de la lista de checkins y añade un mapView a la vista de detalle.
 
 Si necesitamos escribir código específico para un dispositivo podemos utilizar
 
@@ -27,7 +30,7 @@ Si necesitamos escribir código específico para un dispositivo podemos utilizar
 	    	// código para iPad
 	    }
 
-Por ejemplo, en el caso de la orientación de la vistas. Las guías de interfaz de usuario recomiendan que en iPad se permitación todas las orientaciones y en iPhone todas menos PortraitUpsideDown. Asigna esta orientación a todas las vistas.
+Por ejemplo, en el caso de la orientación de la vistas. Las guías de interfaz de usuario recomiendan que en iPad permita todas las orientaciones y en iPhone todas menos PortraitUpsideDown. Configura todas las vistas para que se adapten a la recomendación
 
 	- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -38,7 +41,7 @@ Por ejemplo, en el caso de la orientación de la vistas. Las guías de interfaz 
 	}
 
 
-La vista de detalle, en nuestro caso la vista de mapa va a ser el delegate del `UISplitViewController`. Este delegate tiene dos métodos que se llamarán cuando la orientación sea horizontal y se vayan a mostrar las dos vistas y otro cuando la orientación sea vertical y únicamente se muestre la vista de detalle y en un popover la vista master.
+La vista de detalle, en nuestro caso la vista de mapa, va a ser el delegate del `UISplitViewController`. Este delegate tiene dos métodos que se llamarán cuando la orientación sea horizontal y se vayan a mostrar las dos vistas y otro cuando la orientación sea vertical y únicamente se muestre la vista de detalle y en un popover la vista master.
 
 Implementa el protocolo
 
@@ -70,7 +73,7 @@ Para asignar esta referencia, lo hacemos a través de la referencia al splitView
 	    self.mapViewController = (HZFMapViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 	}
 
-Al selecionar una celda, asignamos el checkin en la vista de mapa
+Al seleccionar una celda, asignamos el checkin en la vista de mapa
 
 	- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -79,10 +82,10 @@ Al selecionar una celda, asignamos el checkin en la vista de mapa
 	    }
 	}
 
-El iPhone seguirá ejecutandose por el segue que teníamos puesto, así que en este caso no tendremos problemas.
+El iPhone seguirá ejecutándose por el Segue que teníamos definido.
 
 
-## Pull Request no alinea bien
+## Pull Request no se alinea bien
 
 Creo que encontré un bug en la librería y es que las etiquetas no se alinean correctamente. Para solucionarlo fue suficiente con modificar en el fichero `SVPullToRefresh`.
 
@@ -91,7 +94,7 @@ Creo que encontré un bug en la librería y es que las etiquetas no se alinean c
 
 ## Añadir un nuevo checkin
 
-Para el código de nuevo checkin añadirmos un nuevo TableViewController. Copia la interfaz que teníamos preparada en la vista de iPhone y asigna la clase de HZFNewChekinViewController. Añade un botón con un `+` al listado de checkins y conecta la dos vistas mediante un Segue. En este caso el tipo de segue que vamos a utilizar es un Modal Form. A la vista de nuevo checkin le pondremos los botones de guardar y cancelar.
+Para el código de nuevo checkin añadiremos un nuevo TableViewController. Copia la interfaz que teníamos preparada en la vista de iPhone y asigna la clase de HZFNewChekinViewController. Añade un botón con un `+` al listado de checkins y conecta la dos vistas mediante un Segue. En este caso el tipo de Segue que vamos a utilizar es un Modal Form. A la vista de nuevo checkin le pondremos los botones de guardar y cancelar.
 
 El código del botón de cancelar tendrá que ocultar el ModalViewController
 
@@ -111,9 +114,9 @@ El código del botón de guardar, reutilizaremos el código que ya teníamos y n
 	}
 
 
-Añade también un tableViewController para el listado de categorias igual que teníamos anteriormente.
+Añade también un tableViewController para el listado de categorías igual que teníamos anteriormente.
 
-Asegurate de conectar todos los outlets correctamente para que la interfaz funcione correctamente.
+Asegúrate de conectar todos los outlets correctamente para que la interfaz funcione correctamente.
 
 
 ## Ejercicio

@@ -15,7 +15,6 @@
 <li><a href="pulltorefresh.html">Pull to Refresh</a></li>
 <li><a href="ipad.html">iPad</a></li>
 <li class="divider"></li>
-<li><a href="#">Three20</a></li>
 <li><a href="cocos2d.html">Cocos2d</a></li>
 <li class="divider"></li>
 <li><a href="more.html">Más recursos</a></li>

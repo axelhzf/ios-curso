@@ -5,13 +5,11 @@ title : Modelo
 
 # Creación del proyecto
 
-Para crear el proyecto seguiremos los pasos que hemos visto anteriormente `File/New/Project` lo llamamos `twosquare` y en este caso vamos a seleccionar Device Family `Universal`. Esto quiere decir que nuestra aplicación funcionará tanto en un iPhone como en un iPad. Esta es la opción correcta cuando quieres que tu aplicación se pueda utilizar en los dos dispositivos y en ningún caso sacar dos versiones distintas de tu aplicación. Esta es una práctica que suelen llevar a cabo algunos desarrolladores en la App Store y es realmente molesta para los usuarios. Supón que ya has pagado por una aplicación para tu iPhone y tienes que volver a pagar para poder utilizar en el iPad.
-
-Ahora, cuando vayamos a ejecutar la aplicación podemos elegir si queremos abrir el simulador del iPad o el del iPhone. Prueba a arrancar la aplicación con los dos simuladores.
+Para crear el proyecto seguiremos los pasos que hemos visto anteriormente `File/New/Project` lo llamamos `twosquare`.
 
 # Modelo
 
-Antes que ponernos a diseñar las pantallas, debemos tener el modelo de datos que va a utilizar la aplicación. En nuestro caso va a ser muy sencillo y constará de dos clases: La primera contendrá los datos de un checkin y la segunda contendrá la lista con todos los checkins.
+Antes de ponernos a diseñar las pantallas, debemos tener el modelo de datos que va a utilizar la aplicación. En nuestro caso va a ser muy sencillo y constará de dos clases: La primera contendrá los datos de un checkin y la segunda contendrá la lista con todos los checkins.
 
 **HZFCheckin.h**
 
@@ -29,7 +27,7 @@ Antes que ponernos a diseñar las pantallas, debemos tener el modelo de datos qu
      
 	@end
 
-Puedes ver que esta e la primera vez que estamos variando los parámetros que utilizamos para definir las propiedades. Es común que cuando se declaren NSString se utilice la opción copy, que lo que hace es crear un nuevo objeto con el mismo contenido del anterior. En el caso de las propiedades que no son objetos (los doubles), no se pasa ningún parámetro.
+Puedes ver que esta es la primera vez que estamos variando los parámetros que utilizamos para definir las propiedades. Es común que cuando se declaren NSStrings se utilice la opción copy, que lo que hace es crear un nuevo objeto con el mismo contenido del anterior. En el caso de las propiedades que no son objetos (los doubles) no tiene sentido pasar parámetros.
 
 **HZFCheckin.m**
 
@@ -92,4 +90,4 @@ La implementación consisten sencillamente en sintetizar cada unas de las proper
     
 	@end
 
-Por ahora la implementación se limita a rellenar la lista con datos falso para poder ir probando nuestra interfaz de usuario. Luego esta clase será la encargada de persistir los datos en el sistema de ficheros o en el servidor mediante un webservice.
+Por ahora la implementación se limita a rellenar la lista con datos falso para poder ir probando nuestra interfaz de usuario. Luego esta clase será la encargada de persistir los datos en el servidor.

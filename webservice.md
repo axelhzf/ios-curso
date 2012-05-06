@@ -5,7 +5,7 @@ title : Webservice
 
 ## Persistencia
 
-A la hora de persistir los datos de la aplicación existen varias alternativas
+A la hora de persistir los datos de la aplicación existen varias alternativas:
 
 * Fichero de propiedades
 * Escritura en fichero
@@ -13,14 +13,13 @@ A la hora de persistir los datos de la aplicación existen varias alternativas
 * Core Data (ORM de Apple)
 * Web Service
 
-Para el tipo de aplicación que estamos haciendo, lo más conveniente es utilizar un web service.
-De manera que tengamos la información de los checkins de todos los usuarios sincronizada y que
-un usuario pueda ver los checkins de los demás. Es común que estos sistemas se combinen entre sí:
-Por ejemplo, utilizar web service para sincronizar los datos, pero cuando el usuario no tiene
-conectividad utilizar los últimos datos almacenados en base de datos. En este caso utilizaremos
-únicamente web service e intentaremos que los alumnos del curso puedan compartir los checkins
-cada uno desde su aplicación. Si estás interesado en ver cómo funcionan el resto de sistemas,
-dejo algunos enlaces a tutoriales.
+Es común que estos sistemas se combinen entre sí:
+Por ejemplo, utilizar web service para sincronizar los datos entre distintos usuario y cuando el usuario no tiene conectividad utilizar los últimos datos almacenados en base de datos.
+
+Para el tipo de aplicación que estamos haciendo, lo más conveniente es utilizar un web service. De manera que tengamos la información de los checkins de todos los usuarios sincronizada y que un usuario pueda ver los checkins de los demás. El objetivo es que los alumnos del curso puedan compartir los checkins
+cada uno desde su aplicación. 
+
+Si estás interesado en ver cómo funcionan el resto de sistemas, dejo algunos enlaces a tutoriales.
 
 * [http://www.raywenderlich.com/11944/core-data-tutorial-updated-for-ios-5](http://www.raywenderlich.com/11944/core-data-tutorial-updated-for-ios-5)
 * [http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/GettingStartedWithCoreData/_index.html](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/GettingStartedWithCoreData/_index.html)
@@ -28,9 +27,8 @@ dejo algunos enlaces a tutoriales.
 
 ## Web service
 
-El webservice que vamos a utilizar va a ser REST y el formato de comunicación de los datos va
-a ser JSON. Está escrito en Java utilizando en Play!Framework y el código fuente está disponible
-en el repositorio
+El webservice que vamos a utilizar va a ser REST y el formato de comunicación de los datos va a ser JSON. Está escrito en Java utilizando en Play!Framework y el código fuente está disponible
+en el repositorio:
 
 [https://github.com/axelhzf/ios-curso/tree/master/webservice](https://github.com/axelhzf/ios-curso/tree/master/webservice)
 
@@ -39,6 +37,7 @@ El webservice está desplegado en [heroku](http://www.heroku.com/) en la direcci
 [http://axelhzf-ios-tut.herokuapp.com/](http://axelhzf-ios-tut.herokuapp.com/)
 
 Desde esta pantalla podemos gestionar los checkins que tenemos almacenados en la base de datos.
+
 Los métodos de la API JSON son:
 
 **Obtener lista de checkins**
@@ -51,26 +50,21 @@ POST [http://axelhzf-ios-tut.herokuapp.com/api/checkins](http://axelhzf-ios-tut.
 
 ## Consumir un servicio web
 
-Para consumir el servicio web debemos hacer una petición HTTP a la URL del servicio web. Esta
-petición la debemos hacer de forma asíncrona si no queremos que la aplicación se quede congelada
-hasta que el servidor nos responda o hasta que se produzca un timeout. Para ello vamos a tener
-que trabajar con un hilo independiente, que va a estar pendiente de que el servidor les responda.
+Para consumir el servicio web debemos hacer una petición HTTP a la URL del servicio web. Esta petición la debemos hacer de forma asíncrona si no queremos que la aplicación se quede congelada
+hasta que el servidor responda o hasta que se produzca un timeout. Para ello vamos a tener que trabajar con un hilo independiente, que va a estar pendiente de la respuesta del servidor.
 
 Para esto tenemos varias alternativas:
 
 * NSURLConnection [http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/URLLoadingSystem/Tasks/UsingNSURLConnection.html)
 * ASIHTTPRequest [http://allseeing-i.com/ASIHTTPRequest/](http://allseeing-i.com/ASIHTTPRequest/) (descontinuaada)
 
-Y la alternativa que vamos a utilizar, que es realizar una petición síncrona, pero no en un hilo
-principal. Para ello vamos a utilizar el Grand Central Dispatch.
+Y la última opción que es la que vamos a utilizar: Realizar una petición síncrona, pero no en el hilo principal. Para ello vamos a utilizar Grand Central Dispatch.
 
 ## Grand Central Dispathc (GCD)
 
 [Grand Central Dispatch (GCD)](https://developer.apple.com/library/mac/#featuredarticles/BlocksGCD/_index.html).
-está disponible desde la versión 10.6 de OS X y iOS 4. GCD es una tecnología para optimizar el
-soporte d elas aplicaciones para procesadores multinúcleo. El sistema operativo es el que se
-encarga de gestionar los hilos de ejecución de las diferentes aplicaciones.
-Ya vimos algo de utilización de GCD con la implementación de Singleton que hicimos.
+está disponible desde la versión 10.6 de OS X y iOS 4. GCD es una tecnología para optimizar el uso de procesadores multinúcleo. El sistema operativo es el que se encarga de gestionar los hilos de ejecución de las aplicaciones.
+Ya vimos algo de de GCD con la implementación de Singleton que hicimos.
 Grand Central Dispatch se basa en:
 
 * block objects
@@ -78,9 +72,8 @@ Grand Central Dispatch se basa en:
 * synchronization
 * event sources
 
-Los `blocks` son funciones anónimas que pueden definirse inline. Los bloques capturan copias
-de solo lectura de las variables definidas en el ámbito donde fue definido el bloque. De
-forma similar a una `closure` en otros lenguajes. La sintaxis para definir un bloque es
+Los `blocks` son funciones anónimas que pueden definirse inline. Los bloques capturan copias de solo lectura de las variables definidas en el ámbito donde fue definido el bloque. De
+forma similar a una `closure` en otros lenguajes. La sintaxis para definir un bloque es:
 
     my_block = ^(void){ printf("hello world\n"); };
 
@@ -92,8 +85,7 @@ Los bloques realizan una copia de las variables definidas en el ámbito
     greeting = "goodbye";
     b("world"); // prints "hello world\n"
 
-Los bloque son programados para que se ejecuten en colas que es la forma que utiliza el GCD
-para definir la concurrencia.
+Los bloques se ejecutan en colas, la forma utilizada por el GCD para definir la concurrencia.
 
 <blockquote class="twitter-tweet tw-align-center"><p>Xcode needs achievements: "You've successfully typed the block declaration syntax from memory 10 times in a row!"</p>&mdash; Zach Waugh (@zachwaugh) <a href="https://twitter.com/zachwaugh/status/193717205119148033" data-datetime="2012-04-21T15:05:55+00:00">April 21, 2012</a></blockquote>
 
@@ -105,34 +97,29 @@ Para ejecutar un trabajo en una cola
 
     dispatch_async(a_queue, ^{ do_not_wait_for_me(); });
 
-Cuando dentro de un bloque queremos invocar un método en el thread principal podemos utilizar
-el método
+Cuando dentro de un bloque queremos invocar un método en el thread principal podemos utilizar el método
 
     [self performSelectorOnMainThread:@selector(method:) withObject:param waitUntilDone:NO];
 
 
 ## HTTP Request y Json Parser
 
-Para realizaar una petición de forma síncrona podemos utilizar el método
+Para realizar una petición de forma síncrona podemos utilizar el método
 
     NSData* data = [NSData dataWithContentsOfURL: @"http://......"];
 
-La respuesta que obtengamos del servidor ahora la debemos parsear. Para ello, a partir de la versión
-5 de iOS se introdujo la clase NSJSONSerialization.
+La respuesta que obtengamos del servidor la debemos parsear. Para ello, a partir de la versión 5 de iOS se introdujo la clase NSJSONSerialization.
 
     NSError* error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
-                                                         options:kNilOptions
-                                                           error:&error];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
 
-Con este método parseamos el json en un NSDictionary o un NSArray (dependiente de la estructura
-con la que venga el JSON).
+Con este método se convierte el JSON en un NSDictionary o un NSArray (dependiente de la estructura con la que venga el JSON).
 
 ## Ejercicio
 
 - Crea una `dispatch_queue_t`
-- Crea un bloque asíncrono que realice la petición al servidor y parsee el json
-- Convierte el JSON de respuesta en objetos de la clase Checkin
+- Crea un bloque asíncrono que realice la petición al servidor
+- Convierte el JSON de respuesta en un array de objetos de la clase Checkin
 - Actualiza la tabla principal con los datos devueltos por el servidor.
 
 ### Tips
@@ -201,13 +188,13 @@ Por último falta realizar la llamada a recuperar los datos del servidor
 
 ## Creando un nuevo checkin en el servidor
 
-Siguiendo los principios REST, para crear un nuevo checkin se realize una petición POST. El body de la petición son los datos en formato JSON.
+Siguiendo los principios REST, para crear un nuevo checkin se realiza una petición POST. El body de la petición son los datos en formato JSON.
 
 Para transformar un objeto en un string JSON utilizamos el método inverso al anterior
 
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&error];
 
-Para realizar una petición HTTP de forma síncrona
+Para realizar una petición POST de forma síncrona
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: url];
     [request setHTTPMethod:@"POST"];
@@ -221,7 +208,7 @@ Para realizar una petición HTTP de forma síncrona
 
 ## Solución
 
-Añadimos un método en la clase checkin que transforma el objeto a formato JSON
+Añade un método en la clase checkin que transforma el objeto a formato JSON
 
     - (NSData *)toJson {
         NSDateFormatter *dateFormatter = [HZFCheckin dateFormatter];

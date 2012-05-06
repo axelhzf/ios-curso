@@ -5,10 +5,9 @@ title : Compartir
 
 ## Compartir vía twitter
 
-A partir de iOS 5 twitter viene integrado directamente con el sistema y se puso a disposición de los usuarios una API con la que es muy sencillo enviar tweets desde la propia aplicación.
+A partir de iOS 5 twitter viene integrado directamente con el sistema y se puso a disposición de los usuarios una API con la que es muy sencillo enviar tweets desde cualquier aplicación.
 
-La librería es `Twitter.framework` y debemos incluirla para utilizarla en nuestra aplicación. Es muy sencilla
-de utilizar
+La librería es `Twitter.framework` y debemos incluirla para utilizarla en nuestra aplicación. Es muy sencilla de utilizar
 
     #import <Twitter/Twitter.h>
 
@@ -43,12 +42,10 @@ Nuestra clase debe implementar el protocolo `MFMailComposeViewControllerDelegate
 
 ## Ejercicio
 
-Añadir una pantalla que permita compartir checkins vía twitter y vía email
+Añade una pantalla que permita compartir checkins vía twitter y vía email
 
 ## Solución
 
 El código es el explicado anteriormente. Para no repetirlo dejo únicamente el enlace al código.
 
-[https://github.com/axelhzf/ios-curso/commit/00416c084e1734667eac67913ff5f4758bd61f85]()
-
-
+[https://github.com/axelhzf/ios-curso/commit/00416c084e1734667eac67913ff5f4758bd61f85](https://github.com/axelhzf/ios-curso/commit/00416c084e1734667eac67913ff5f4758bd61f85)
