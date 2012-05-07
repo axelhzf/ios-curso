@@ -2,7 +2,7 @@
 layout: default
 title : Outlets y Actions
 ---
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 # Outlets y Actions
 
