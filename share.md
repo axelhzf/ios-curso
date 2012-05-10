@@ -3,7 +3,7 @@ layout : default
 title : Compartir
 ---
 
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 ## Compartir vía twitter
 
