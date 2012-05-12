@@ -1,7 +1,7 @@
 ---
 layout : default
 ---
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 # Cocos2d
 

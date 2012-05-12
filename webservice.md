@@ -3,8 +3,8 @@ layout : default
 title : Webservice
 ---
 
-{% assign solucion1 = false %}
-{% assign solucion2 = false %}
+{% assign solucion1 = true %}
+{% assign solucion2 = true %}
 
 ## Persistencia
 

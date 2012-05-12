@@ -3,7 +3,7 @@ layout : default
 title : Location
 ---
 
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 # Localización
 

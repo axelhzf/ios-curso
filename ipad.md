@@ -3,7 +3,7 @@ layout : default
 title : iPad
 ---
 
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 # iPad
 

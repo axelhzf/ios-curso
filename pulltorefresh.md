@@ -3,7 +3,7 @@ layout : default
 title : Pull to refresh
 ---
 
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 ## Pull to refresh
 
