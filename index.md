@@ -22,11 +22,11 @@ El curso es principalmente práctico. Está dividido en varios temas y cada uno 
 
 La solución a todos los ejercicios propuestos a lo largo del curso están en el repositorio de código:
 
-[https://github.com/axelhzf/ios-curso]()
+[https://github.com/axelhzf/ios-curso](https://github.com/axelhzf/ios-curso)
 
 Si durante el curso te quedas retrasado y no has terminado un ejercicio que es necesario para seguir avanzando puedes utilizar las soluciones del repositorio. Puedes navegar por el historial de los commits para seleccionar el adecuado:
 
-[https://github.com/axelhzf/ios-curso/commits/master]()
+[https://github.com/axelhzf/ios-curso/commits/master](https://github.com/axelhzf/ios-curso/commits/master)
 
 También puedes clonar el repositorio y tener una copia local:
 
@@ -42,7 +42,7 @@ También puedes clonar el repositorio y tener una copia local:
 
 ##Autor: Axel Hernández Ferrera
 * **Email:** [axelhzf@gmail.com](mailto:axelhzf@gmail.com)
-* **Blog:** [http://axelhzf.tumblr.com](http://axelhzf.tumblr.com)
+* **Blog:** [http://axelhzf.com](http://axelhzf.com)
 * **Twitter:** [axelhzf](http://www.twitter.com/axelhzf)
 
 No soy un experto en desarrollo para iOS, para mi es un hobby. En el día a día soy desarrollador de aplicaciones web (Java + [Play](http://axelhzf.github.com/curso-play) + Javascript). Mi experiencia con iOS comenzó con el [proyecto de fin de carrera](https://vimeo.com/11375913) que presentamos en marzo de 2010. Consistía en un mashup de varios servicios web para mostrar información turística de tenerife. También trabajé en un prototipo de aplicación para [Koliseo](koliseo.com).
