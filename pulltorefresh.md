@@ -9,7 +9,7 @@ title : Pull to refresh
 
 Pull to refresh es un recurso de interfaz de usuario. Se aplica principalmente en tablas y sirve para actualizar el contenido. El creador de la interfaz es el autor de Tweetie, una cliente de twitter para iOS que posteriormente fue comprado por Twitter.
 
-![Pull to refresh](http://also.kottke.org/misc/images/pull-to-refresh.jpg)
+![Pull to refresh](assets/img/pull-to-refresh.jpg)
 
 [http://kottke.org/12/03/twitter-has-patent-for-pull-to-refresh](http://kottke.org/12/03/twitter-has-patent-for-pull-to-refresh)
 
