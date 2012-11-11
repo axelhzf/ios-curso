@@ -15,7 +15,7 @@ Vamos a empezar creando un nuevo proyecto, pero esta vez vamos a seleccionar la 
 
 # Application Delegate
 
-Cocoa Touch hace un uso muy intenso del patrón delegate. A grandes rasgos este patrón consiste en que un objeto, en vez de realizar una tarea, delega en otro objeto asociado para que sea el que realice la tarea.
+Cocoa Touch hace un uso muy intenso del patrón delegate. A grandes rasgos este patrón consiste en que un objeto maneja el comportamiento de otro objeto.
 
 [http://en.wikipedia.org/wiki/Delegation_pattern](http://en.wikipedia.org/wiki/Delegation_pattern)
 
