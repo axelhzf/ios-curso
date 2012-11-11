@@ -3,7 +3,7 @@ layout: default
 title: MultiViews
 ---
 
-{% assign solucion = true %}
+{% assign solucion = false %}
 
 # Varias vistas
 

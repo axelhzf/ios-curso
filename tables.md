@@ -3,9 +3,9 @@ layout: default
 title: Tables
 ---
 
-{% assign solucion1 = true %}
-{% assign solucion2 = true %}
-{% assign solucion3 = true %}
+{% assign solucion1 = false %}
+{% assign solucion2 = false %}
+{% assign solucion3 = false %}
 
 # Tablas
 
