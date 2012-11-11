@@ -28,6 +28,8 @@ Los pasos para utilizar la librería son:
 * Incluir la librería `QuartzCore`
 * Importar la cabecera `#import "SVPullToRefresh.h"`
 
+Esta es la forma manual de incluir las liberías. También se puede utilizar CocoaPods, un gestor de dependencias. En este [post](http://axelhzf.com/blog/2012-11-10-cocoapods.html) explico como utilizarlo.
+
 
 Lo único que falta es definir qué método se va a ejecutar.
 
