@@ -2,7 +2,7 @@
 layout : default
 title : Introducción a Objective-C
 ---
-{% assign solucion = false %}
+{% assign solucion = true %}
 
 # Introducción a Objective-C
 
