@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign solucion = true %}
+{% assign solucion = false %}
 
 # Nuevos checkins
 
