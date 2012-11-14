@@ -5,7 +5,7 @@ title: Tables
 
 {% assign solucion1 = true %}
 {% assign solucion2 = true %}
-{% assign solucion3 = false %}
+{% assign solucion3 = true %}
 
 # Tablas
 
