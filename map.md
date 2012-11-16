@@ -3,7 +3,7 @@ layout: default
 title : Map
 ---
 
-{% assign solucion = true %}
+{% assign solucion = false %}
 
 # Mapa
 
